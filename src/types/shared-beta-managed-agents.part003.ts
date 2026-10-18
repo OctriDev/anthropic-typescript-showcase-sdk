@@ -95,6 +95,8 @@ export interface BetaManagedAgentsDeployment {
   description: string | null;
   /**
    * Reference to the agent this deployment runs, resolved to a concrete version.
+
+   * @example {"type":"agent","id":"agent_011CZkYqphY8vELVzwCUpqiQ","version":1}
    */
   agent: BetaManagedAgentsAgentReference;
   /**
@@ -243,6 +245,8 @@ export interface BetaManagedAgentsDeploymentRun {
   error: BetaManagedAgentsRunError | null;
   /**
    * Snapshot of the agent at fire time. Always fully resolved — deployments pin agent + version.
+
+   * @example {"type":"agent","id":"agent_011CZkYqphY8vELVzwCUpqiQ","version":1}
    */
   agent: BetaManagedAgentsAgentReference;
   /**

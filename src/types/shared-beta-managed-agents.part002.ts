@@ -229,6 +229,8 @@ export interface BetaManagedAgentsBudgetLimit {
   type: "limit";
   /**
    * Maximum list cost the session may accrue. List price is used regardless of any negotiated discount, so the cap fires at or before the actual charge.
+
+   * @example {"currency":"USD","amount":"2500"}
    */
   maxListCost: BetaMonetaryAmount;
 }

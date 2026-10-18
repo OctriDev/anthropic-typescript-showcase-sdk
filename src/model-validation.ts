@@ -595,7 +595,7 @@ const modelSchemas: Readonly<Record<string, RuntimeSchema>> = {
       speed: { ref: "BetaSpeed" },
     },
   },
-  BetaDreamModelParams: { oneOf: [{ ref: "BetaDreamModelConfigParams" }] },
+  BetaDreamModelParams: { ref: "BetaDreamModelParams" },
   BetaDreamOutput: { type: "object", oneOf: [{ ref: "BetaDreamMemoryStoreOutput" }] },
   BetaDreamSessionsInput: {
     type: "object",
@@ -1099,7 +1099,7 @@ const modelSchemas: Readonly<Record<string, RuntimeSchema>> = {
     required: ["type", "maxListCost"],
     properties: {
       type: { type: "string", enum: ["limit"] },
-      maxListCost: { allOf: [{ ref: "BetaMonetaryAmount" }] },
+      maxListCost: { ref: "BetaMonetaryAmount" },
     },
   },
   BetaManagedAgentsCommitCheckout: {
@@ -1297,7 +1297,7 @@ const modelSchemas: Readonly<Record<string, RuntimeSchema>> = {
       type: { type: "string", enum: ["custom"] },
       name: { type: "string", minLength: 1, maxLength: 128 },
       description: { type: "string", minLength: 1 },
-      inputSchema: { allOf: [{ ref: "BetaManagedAgentsCustomToolInputSchema" }] },
+      inputSchema: { ref: "BetaManagedAgentsCustomToolInputSchema" },
     },
   },
   BetaManagedAgentsDeleteMemoryStoreResponse: {
@@ -1335,7 +1335,7 @@ const modelSchemas: Readonly<Record<string, RuntimeSchema>> = {
       "archivedAt",
     ],
     properties: {
-      agent: { allOf: [{ ref: "BetaManagedAgentsAgentReference" }] },
+      agent: { ref: "BetaManagedAgentsAgentReference" },
       initialEvents: { type: "array", items: { ref: "BetaManagedAgentsDeploymentInitialEvent" } },
       resources: { type: "array", items: { ref: "BetaManagedAgentsSessionResourceConfig" } },
       schedule: { ref: "BetaManagedAgentsSchedule" },
@@ -1370,7 +1370,7 @@ const modelSchemas: Readonly<Record<string, RuntimeSchema>> = {
     properties: {
       triggerContext: { allOf: [{ ref: "BetaManagedAgentsTriggerContext" }] },
       error: { ref: "BetaManagedAgentsRunError" },
-      agent: { allOf: [{ ref: "BetaManagedAgentsAgentReference" }] },
+      agent: { ref: "BetaManagedAgentsAgentReference" },
       createdAt: { allOf: [{ ref: "BetaTimestamp" }] },
     },
   },
@@ -1438,9 +1438,7 @@ const modelSchemas: Readonly<Record<string, RuntimeSchema>> = {
     required: ["type"],
     properties: { type: { type: "string", enum: ["medium"] } },
   },
-  BetaManagedAgentsEffortParams: {
-    oneOf: [{ ref: "BetaManagedAgentsEffortLevel" }, { ref: "BetaManagedAgentsEffort" }],
-  },
+  BetaManagedAgentsEffortParams: { ref: "BetaManagedAgentsEffortParams" },
   BetaManagedAgentsEffortXhigh: {
     type: "object",
     required: ["type"],
@@ -1472,7 +1470,7 @@ const modelSchemas: Readonly<Record<string, RuntimeSchema>> = {
     properties: {
       type: { type: "string", enum: ["environment_variable"] },
       networking: { allOf: [{ ref: "BetaManagedAgentsCredentialNetworkingResponse" }] },
-      injectionLocation: { allOf: [{ ref: "BetaManagedAgentsInjectionLocationResponse" }] },
+      injectionLocation: { ref: "BetaManagedAgentsInjectionLocationResponse" },
     },
   },
   BetaManagedAgentsEnvironmentVariableCreateParams: {
@@ -1520,7 +1518,7 @@ const modelSchemas: Readonly<Record<string, RuntimeSchema>> = {
     required: ["type", "content"],
     properties: {
       type: { type: "string", enum: ["content_delta"] },
-      content: { allOf: [{ ref: "BetaManagedAgentsTextBlock" }] },
+      content: { ref: "BetaManagedAgentsTextBlock" },
     },
   },
   BetaManagedAgentsEventDeltaEvent_Delta: {
@@ -2168,7 +2166,7 @@ const modelSchemas: Readonly<Record<string, RuntimeSchema>> = {
       source: { type: "string", minLength: 1 },
       title: { type: "string", minLength: 1 },
       content: { type: "array", items: { ref: "BetaManagedAgentsSearchResultContent" } },
-      citations: { allOf: [{ ref: "BetaManagedAgentsSearchResultCitations" }] },
+      citations: { ref: "BetaManagedAgentsSearchResultCitations" },
     },
   },
   BetaManagedAgentsSearchResultCitations: { type: "object", required: ["enabled"] },
@@ -2231,7 +2229,7 @@ const modelSchemas: Readonly<Record<string, RuntimeSchema>> = {
         type: "array",
         items: { ref: "BetaManagedAgentsOutcomeEvaluationResource" },
       },
-      usage: { allOf: [{ ref: "BetaManagedAgentsSessionUsage" }] },
+      usage: { ref: "BetaManagedAgentsSessionUsage" },
       archivedAt: { ref: "BetaTimestamp" },
       budget: { ref: "BetaManagedAgentsBudget" },
     },
@@ -2493,13 +2491,13 @@ const modelSchemas: Readonly<Record<string, RuntimeSchema>> = {
     properties: {
       type: { type: "string", enum: ["session.usage"] },
       processedAt: { allOf: [{ ref: "BetaTimestamp" }] },
-      usage: { allOf: [{ ref: "BetaManagedAgentsSessionUsageSnapshot" }] },
+      usage: { ref: "BetaManagedAgentsSessionUsageSnapshot" },
       budget: { ref: "BetaManagedAgentsBudget" },
     },
   },
   BetaManagedAgentsSessionUsageSnapshot: {
     type: "object",
-    properties: { listCost: { allOf: [{ ref: "BetaMonetaryAmount" }] } },
+    properties: { listCost: { ref: "BetaMonetaryAmount" } },
   },
   BetaManagedAgentsSkill: { ref: "BetaManagedAgentsSkill" },
   BetaManagedAgentsSkillNotFoundDeploymentPausedReasonError: {
@@ -2519,7 +2517,7 @@ const modelSchemas: Readonly<Record<string, RuntimeSchema>> = {
     properties: {
       type: { type: "string", enum: ["span.model_request_end"] },
       processedAt: { allOf: [{ ref: "BetaTimestamp" }] },
-      modelUsage: { allOf: [{ ref: "BetaManagedAgentsSpanModelUsage" }] },
+      modelUsage: { ref: "BetaManagedAgentsSpanModelUsage" },
     },
   },
   BetaManagedAgentsSpanModelRequestStartEvent: {
@@ -2551,7 +2549,7 @@ const modelSchemas: Readonly<Record<string, RuntimeSchema>> = {
     properties: {
       type: { type: "string", enum: ["span.outcome_evaluation_end"] },
       processedAt: { allOf: [{ ref: "BetaTimestamp" }] },
-      usage: { allOf: [{ ref: "BetaManagedAgentsSpanModelUsage" }] },
+      usage: { ref: "BetaManagedAgentsSpanModelUsage" },
     },
   },
   BetaManagedAgentsSpanOutcomeEvaluationOngoingEvent: {
@@ -2803,7 +2801,7 @@ const modelSchemas: Readonly<Record<string, RuntimeSchema>> = {
     type: "object",
     properties: {
       title: { anyOf: [{ type: "string", minLength: 1, maxLength: 500 }] },
-      agent: { allOf: [{ ref: "BetaManagedAgentsSessionAgentUpdate" }] },
+      agent: { ref: "BetaManagedAgentsSessionAgentUpdate" },
       budget: { ref: "BetaManagedAgentsBudget" },
     },
   },

@@ -7,6 +7,13 @@ const parseRuntimeSchema = (source: string): RuntimeSchema => JSON.parse(source)
 
 export const modelSchemasPart006: readonly (readonly [string, RuntimeSchema])[] = [
   [
+    "BetaResponseToolSearchToolSearchResultBlock",
+    parseRuntimeSchema(
+      '{"type":"object","required":["toolReferences","type"],"properties":{"toolReferences":{"type":"array","items":{"ref":"BetaResponseToolReferenceBlock"}},"type":{"type":"string"}}}',
+    ),
+  ],
+
+  [
     "BetaResponseToolUseBlock",
     parseRuntimeSchema(
       '{"type":"object","required":["id","input","name","type"],"properties":{"caller":{"ref":"BetaResponseToolUseBlockCaller"},"id":{"type":"string","pattern":"^[a-zA-Z0-9_-]+$"},"input":{"type":"object"},"name":{"type":"string","minLength":1},"toolsetName":{"anyOf":[{"type":"string","minLength":1,"maxLength":64,"pattern":"^[a-zA-Z0-9_-]+$"},{"type":"null"}]},"type":{"type":"string"}}}',
@@ -689,13 +696,6 @@ export const modelSchemasPart006: readonly (readonly [string, RuntimeSchema])[] 
 
   [
     "BetaWebhookSessionRequiresActionEventData",
-    parseRuntimeSchema(
-      '{"type":"object","required":["type","id","organizationId","workspaceId"],"properties":{"type":{"type":"string"},"id":{"type":"string"},"organizationId":{"type":"string"},"workspaceId":{"type":"string"}}}',
-    ),
-  ],
-
-  [
-    "BetaWebhookSessionRunningEventData",
     parseRuntimeSchema(
       '{"type":"object","required":["type","id","organizationId","workspaceId"],"properties":{"type":{"type":"string"},"id":{"type":"string"},"organizationId":{"type":"string"},"workspaceId":{"type":"string"}}}',
     ),

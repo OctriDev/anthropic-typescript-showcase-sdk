@@ -7,6 +7,13 @@ const parseRuntimeSchema = (source: string): RuntimeSchema => JSON.parse(source)
 
 export const modelSchemasPart008: readonly (readonly [string, RuntimeSchema])[] = [
   [
+    "RequestCodeExecutionToolResultError",
+    parseRuntimeSchema(
+      '{"type":"object","required":["errorCode","type"],"properties":{"errorCode":{"ref":"CodeExecutionToolResultErrorCode"},"type":{"type":"string"}}}',
+    ),
+  ],
+
+  [
     "RequestContainerUploadBlock",
     parseRuntimeSchema(
       '{"type":"object","required":["fileId","type"],"properties":{"cacheControl":{"nullable":true,"oneOf":[{"ref":"CacheControlEphemeral"}]},"fileId":{"type":"string"},"type":{"type":"string"}}}',
@@ -694,13 +701,6 @@ export const modelSchemasPart008: readonly (readonly [string, RuntimeSchema])[] 
 
   [
     "WebFetchTool_20250910",
-    parseRuntimeSchema(
-      '{"type":"object","required":["name","type"],"properties":{"allowedCallers":{"type":"array","items":{"ref":"AllowedCaller"}},"allowedDomains":{"type":"array","nullable":true,"items":{"type":"string"}},"blockedDomains":{"type":"array","nullable":true,"items":{"type":"string"}},"cacheControl":{"nullable":true,"oneOf":[{"ref":"CacheControlEphemeral"}]},"citations":{"ref":"RequestCitationsConfig"},"deferLoading":{"type":"boolean"},"maxContentTokens":{"anyOf":[{"type":"integer","exclusiveMinimum":0},{"type":"null"}]},"maxUses":{"anyOf":[{"type":"integer","exclusiveMinimum":0},{"type":"null"}]},"name":{"type":"string"},"strict":{"type":"boolean"},"type":{"type":"string"}}}',
-    ),
-  ],
-
-  [
-    "WebFetchTool_20260209",
     parseRuntimeSchema(
       '{"type":"object","required":["name","type"],"properties":{"allowedCallers":{"type":"array","items":{"ref":"AllowedCaller"}},"allowedDomains":{"type":"array","nullable":true,"items":{"type":"string"}},"blockedDomains":{"type":"array","nullable":true,"items":{"type":"string"}},"cacheControl":{"nullable":true,"oneOf":[{"ref":"CacheControlEphemeral"}]},"citations":{"ref":"RequestCitationsConfig"},"deferLoading":{"type":"boolean"},"maxContentTokens":{"anyOf":[{"type":"integer","exclusiveMinimum":0},{"type":"null"}]},"maxUses":{"anyOf":[{"type":"integer","exclusiveMinimum":0},{"type":"null"}]},"name":{"type":"string"},"strict":{"type":"boolean"},"type":{"type":"string"}}}',
     ),

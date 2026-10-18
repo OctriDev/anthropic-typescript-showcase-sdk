@@ -9,7 +9,7 @@ export const modelSchemasPart003: readonly (readonly [string, RuntimeSchema])[] 
   [
     "BetaManagedAgentsEventDeltaEvent_ContentDelta",
     parseRuntimeSchema(
-      '{"type":"object","required":["type","content"],"properties":{"type":{"type":"string","enum":["content_delta"]},"index":{"type":"integer"},"content":{"allOf":[{"ref":"BetaManagedAgentsTextBlock"}]}}}',
+      '{"type":"object","required":["type","content"],"properties":{"type":{"type":"string","enum":["content_delta"]},"index":{"type":"integer"},"content":{"ref":"BetaManagedAgentsTextBlock"}}}',
     ),
   ],
 
@@ -604,7 +604,7 @@ export const modelSchemasPart003: readonly (readonly [string, RuntimeSchema])[] 
   [
     "BetaManagedAgentsSearchResultBlock",
     parseRuntimeSchema(
-      '{"type":"object","required":["type","source","title","content","citations"],"properties":{"type":{"type":"string","enum":["search_result"]},"source":{"type":"string","minLength":1},"title":{"type":"string","minLength":1},"content":{"type":"array","items":{"ref":"BetaManagedAgentsSearchResultContent"}},"citations":{"allOf":[{"ref":"BetaManagedAgentsSearchResultCitations"}]}}}',
+      '{"type":"object","required":["type","source","title","content","citations"],"properties":{"type":{"type":"string","enum":["search_result"]},"source":{"type":"string","minLength":1},"title":{"type":"string","minLength":1},"content":{"type":"array","items":{"ref":"BetaManagedAgentsSearchResultContent"}},"citations":{"ref":"BetaManagedAgentsSearchResultCitations"}}}',
     ),
   ],
 
@@ -653,7 +653,7 @@ export const modelSchemasPart003: readonly (readonly [string, RuntimeSchema])[] 
   [
     "BetaManagedAgentsSession",
     parseRuntimeSchema(
-      '{"type":"object","required":["type","id","status","createdAt","updatedAt","environmentId","title","metadata","agent","resources","vaultIds","outcomeEvaluations","usage","stats","archivedAt","budget"],"properties":{"type":{"type":"string"},"id":{"type":"string"},"status":{"ref":"BetaManagedAgentsSessionStatus"},"createdAt":{"ref":"BetaTimestamp"},"updatedAt":{"ref":"BetaTimestamp"},"environmentId":{"type":"string"},"title":{"type":"string","nullable":true},"metadata":{"type":"object","additionalProperties":{"type":"string"}},"agent":{"ref":"BetaManagedAgentsSessionAgent"},"resources":{"type":"array","items":{"ref":"BetaManagedAgentsSessionResource"}},"vaultIds":{"type":"array","items":{"type":"string"}},"outcomeEvaluations":{"type":"array","items":{"ref":"BetaManagedAgentsOutcomeEvaluationResource"}},"usage":{"allOf":[{"ref":"BetaManagedAgentsSessionUsage"}]},"stats":{"allOf":[{"ref":"BetaManagedAgentsSessionStats"}]},"archivedAt":{"ref":"BetaTimestamp"},"deploymentId":{"type":"string","nullable":true},"budget":{"ref":"BetaManagedAgentsBudget"}}}',
+      '{"type":"object","required":["type","id","status","createdAt","updatedAt","environmentId","title","metadata","agent","resources","vaultIds","outcomeEvaluations","usage","stats","archivedAt","budget"],"properties":{"type":{"type":"string"},"id":{"type":"string"},"status":{"ref":"BetaManagedAgentsSessionStatus"},"createdAt":{"ref":"BetaTimestamp"},"updatedAt":{"ref":"BetaTimestamp"},"environmentId":{"type":"string"},"title":{"type":"string","nullable":true},"metadata":{"type":"object","additionalProperties":{"type":"string"}},"agent":{"ref":"BetaManagedAgentsSessionAgent"},"resources":{"type":"array","items":{"ref":"BetaManagedAgentsSessionResource"}},"vaultIds":{"type":"array","items":{"type":"string"}},"outcomeEvaluations":{"type":"array","items":{"ref":"BetaManagedAgentsOutcomeEvaluationResource"}},"usage":{"ref":"BetaManagedAgentsSessionUsage"},"stats":{"ref":"BetaManagedAgentsSessionStats"},"archivedAt":{"ref":"BetaTimestamp"},"deploymentId":{"type":"string","nullable":true},"budget":{"ref":"BetaManagedAgentsBudget"}}}',
     ),
   ],
 

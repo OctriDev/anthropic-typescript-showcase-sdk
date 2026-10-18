@@ -177,7 +177,7 @@ export const modelSchemasPart002: readonly (readonly [string, RuntimeSchema])[] 
   [
     "BetaManagedAgentsAgentCustomToolUseEvent",
     parseRuntimeSchema(
-      '{"type":"object","required":["type","id","name","input","processedAt"],"properties":{"type":{"type":"string","enum":["agent.custom_tool_use"]},"id":{"type":"string"},"name":{"type":"string"},"input":{"allOf":[{"ref":"BetaManagedAgentsStruct"}]},"processedAt":{"allOf":[{"ref":"BetaTimestamp"}]},"sessionThreadId":{"type":"string","nullable":true}}}',
+      '{"type":"object","required":["type","id","name","input","processedAt"],"properties":{"type":{"type":"string","enum":["agent.custom_tool_use"]},"id":{"type":"string"},"name":{"type":"string"},"input":{"ref":"BetaManagedAgentsStruct"},"processedAt":{"allOf":[{"ref":"BetaTimestamp"}]},"sessionThreadId":{"type":"string","nullable":true}}}',
     ),
   ],
 
@@ -191,7 +191,7 @@ export const modelSchemasPart002: readonly (readonly [string, RuntimeSchema])[] 
   [
     "BetaManagedAgentsAgentMcpToolUseEvent",
     parseRuntimeSchema(
-      '{"type":"object","required":["type","id","name","mcpServerName","input","processedAt"],"properties":{"type":{"type":"string","enum":["agent.mcp_tool_use"]},"id":{"type":"string"},"name":{"type":"string"},"mcpServerName":{"type":"string"},"input":{"allOf":[{"ref":"BetaManagedAgentsStruct"}]},"processedAt":{"allOf":[{"ref":"BetaTimestamp"}]},"evaluatedPermission":{"allOf":[{"ref":"BetaManagedAgentsAgentEvaluatedPermission"}]},"sessionThreadId":{"type":"string","nullable":true}}}',
+      '{"type":"object","required":["type","id","name","mcpServerName","input","processedAt"],"properties":{"type":{"type":"string","enum":["agent.mcp_tool_use"]},"id":{"type":"string"},"name":{"type":"string"},"mcpServerName":{"type":"string"},"input":{"ref":"BetaManagedAgentsStruct"},"processedAt":{"allOf":[{"ref":"BetaTimestamp"}]},"evaluatedPermission":{"allOf":[{"ref":"BetaManagedAgentsAgentEvaluatedPermission"}]},"sessionThreadId":{"type":"string","nullable":true}}}',
     ),
   ],
 
@@ -254,7 +254,7 @@ export const modelSchemasPart002: readonly (readonly [string, RuntimeSchema])[] 
   [
     "BetaManagedAgentsAgentToolUseEvent",
     parseRuntimeSchema(
-      '{"type":"object","required":["type","id","name","input","processedAt"],"properties":{"type":{"type":"string","enum":["agent.tool_use"]},"id":{"type":"string"},"name":{"type":"string"},"input":{"allOf":[{"ref":"BetaManagedAgentsStruct"}]},"processedAt":{"allOf":[{"ref":"BetaTimestamp"}]},"evaluatedPermission":{"allOf":[{"ref":"BetaManagedAgentsAgentEvaluatedPermission"}]},"sessionThreadId":{"type":"string","nullable":true}}}',
+      '{"type":"object","required":["type","id","name","input","processedAt"],"properties":{"type":{"type":"string","enum":["agent.tool_use"]},"id":{"type":"string"},"name":{"type":"string"},"input":{"ref":"BetaManagedAgentsStruct"},"processedAt":{"allOf":[{"ref":"BetaTimestamp"}]},"evaluatedPermission":{"allOf":[{"ref":"BetaManagedAgentsAgentEvaluatedPermission"}]},"sessionThreadId":{"type":"string","nullable":true}}}',
     ),
   ],
 
@@ -366,7 +366,7 @@ export const modelSchemasPart002: readonly (readonly [string, RuntimeSchema])[] 
   [
     "BetaManagedAgentsBudgetLimit",
     parseRuntimeSchema(
-      '{"type":"object","required":["type","maxListCost"],"properties":{"type":{"type":"string","enum":["limit"]},"maxListCost":{"allOf":[{"ref":"BetaMonetaryAmount"}]}}}',
+      '{"type":"object","required":["type","maxListCost"],"properties":{"type":{"type":"string","enum":["limit"]},"maxListCost":{"ref":"BetaMonetaryAmount"}}}',
     ),
   ],
 
@@ -499,7 +499,7 @@ export const modelSchemasPart002: readonly (readonly [string, RuntimeSchema])[] 
   [
     "BetaManagedAgentsCustomToolParams",
     parseRuntimeSchema(
-      '{"type":"object","required":["type","name","description","inputSchema"],"properties":{"type":{"type":"string","enum":["custom"]},"name":{"type":"string","minLength":1,"maxLength":128},"description":{"type":"string","minLength":1},"inputSchema":{"allOf":[{"ref":"BetaManagedAgentsCustomToolInputSchema"}]}}}',
+      '{"type":"object","required":["type","name","description","inputSchema"],"properties":{"type":{"type":"string","enum":["custom"]},"name":{"type":"string","minLength":1,"maxLength":128},"description":{"type":"string","minLength":1},"inputSchema":{"ref":"BetaManagedAgentsCustomToolInputSchema"}}}',
     ),
   ],
 
@@ -548,14 +548,14 @@ export const modelSchemasPart002: readonly (readonly [string, RuntimeSchema])[] 
   [
     "BetaManagedAgentsDeployment",
     parseRuntimeSchema(
-      '{"type":"object","required":["type","id","name","description","agent","environmentId","vaultIds","initialEvents","resources","metadata","schedule","status","pausedReason","createdAt","updatedAt","archivedAt"],"properties":{"type":{"type":"string"},"id":{"type":"string"},"name":{"type":"string"},"description":{"type":"string","nullable":true},"agent":{"allOf":[{"ref":"BetaManagedAgentsAgentReference"}]},"environmentId":{"type":"string"},"vaultIds":{"type":"array","items":{"type":"string"}},"initialEvents":{"type":"array","items":{"ref":"BetaManagedAgentsDeploymentInitialEvent"}},"resources":{"type":"array","items":{"ref":"BetaManagedAgentsSessionResourceConfig"}},"metadata":{"type":"object","additionalProperties":{"type":"string"}},"schedule":{"ref":"BetaManagedAgentsSchedule"},"status":{"allOf":[{"ref":"BetaManagedAgentsDeploymentStatus"}]},"pausedReason":{"ref":"BetaManagedAgentsDeploymentPausedReason"},"budget":{"ref":"BetaManagedAgentsBudget"},"createdAt":{"allOf":[{"ref":"BetaTimestamp"}]},"updatedAt":{"allOf":[{"ref":"BetaTimestamp"}]},"archivedAt":{"ref":"BetaTimestamp"}}}',
+      '{"type":"object","required":["type","id","name","description","agent","environmentId","vaultIds","initialEvents","resources","metadata","schedule","status","pausedReason","createdAt","updatedAt","archivedAt"],"properties":{"type":{"type":"string"},"id":{"type":"string"},"name":{"type":"string"},"description":{"type":"string","nullable":true},"agent":{"ref":"BetaManagedAgentsAgentReference"},"environmentId":{"type":"string"},"vaultIds":{"type":"array","items":{"type":"string"}},"initialEvents":{"type":"array","items":{"ref":"BetaManagedAgentsDeploymentInitialEvent"}},"resources":{"type":"array","items":{"ref":"BetaManagedAgentsSessionResourceConfig"}},"metadata":{"type":"object","additionalProperties":{"type":"string"}},"schedule":{"ref":"BetaManagedAgentsSchedule"},"status":{"allOf":[{"ref":"BetaManagedAgentsDeploymentStatus"}]},"pausedReason":{"ref":"BetaManagedAgentsDeploymentPausedReason"},"budget":{"ref":"BetaManagedAgentsBudget"},"createdAt":{"allOf":[{"ref":"BetaTimestamp"}]},"updatedAt":{"allOf":[{"ref":"BetaTimestamp"}]},"archivedAt":{"ref":"BetaTimestamp"}}}',
     ),
   ],
 
   [
     "BetaManagedAgentsDeploymentRun",
     parseRuntimeSchema(
-      '{"type":"object","required":["type","id","deploymentId","triggerContext","sessionId","error","agent","createdAt"],"properties":{"type":{"type":"string"},"id":{"type":"string"},"deploymentId":{"type":"string"},"triggerContext":{"allOf":[{"ref":"BetaManagedAgentsTriggerContext"}]},"sessionId":{"type":"string","nullable":true},"error":{"ref":"BetaManagedAgentsRunError"},"agent":{"allOf":[{"ref":"BetaManagedAgentsAgentReference"}]},"createdAt":{"allOf":[{"ref":"BetaTimestamp"}]}}}',
+      '{"type":"object","required":["type","id","deploymentId","triggerContext","sessionId","error","agent","createdAt"],"properties":{"type":{"type":"string"},"id":{"type":"string"},"deploymentId":{"type":"string"},"triggerContext":{"allOf":[{"ref":"BetaManagedAgentsTriggerContext"}]},"sessionId":{"type":"string","nullable":true},"error":{"ref":"BetaManagedAgentsRunError"},"agent":{"ref":"BetaManagedAgentsAgentReference"},"createdAt":{"allOf":[{"ref":"BetaTimestamp"}]}}}',
     ),
   ],
 
@@ -667,21 +667,21 @@ export const modelSchemasPart002: readonly (readonly [string, RuntimeSchema])[] 
   [
     "BetaManagedAgentsEnvironmentVariableAuthResponse",
     parseRuntimeSchema(
-      '{"type":"object","required":["type","secretName","networking","injectionLocation"],"properties":{"type":{"type":"string","enum":["environment_variable"]},"secretName":{"type":"string"},"networking":{"allOf":[{"ref":"BetaManagedAgentsCredentialNetworkingResponse"}]},"injectionLocation":{"allOf":[{"ref":"BetaManagedAgentsInjectionLocationResponse"}]}}}',
+      '{"type":"object","required":["type","secretName","networking","injectionLocation"],"properties":{"type":{"type":"string","enum":["environment_variable"]},"secretName":{"type":"string"},"networking":{"allOf":[{"ref":"BetaManagedAgentsCredentialNetworkingResponse"}]},"injectionLocation":{"ref":"BetaManagedAgentsInjectionLocationResponse"}}}',
     ),
   ],
 
   [
     "BetaManagedAgentsEnvironmentVariableCreateParams",
     parseRuntimeSchema(
-      '{"type":"object","required":["type","secretName","secretValue","networking"],"properties":{"type":{"type":"string","enum":["environment_variable"]},"secretName":{"type":"string","minLength":1,"maxLength":255},"secretValue":{"type":"string","minLength":1,"maxLength":4096},"networking":{"allOf":[{"ref":"BetaManagedAgentsCredentialNetworkingParams"}]},"injectionLocation":{"allOf":[{"ref":"BetaManagedAgentsInjectionLocationParams"}]}}}',
+      '{"type":"object","required":["type","secretName","secretValue","networking"],"properties":{"type":{"type":"string","enum":["environment_variable"]},"secretName":{"type":"string","minLength":1,"maxLength":255},"secretValue":{"type":"string","minLength":1,"maxLength":4096},"networking":{"allOf":[{"ref":"BetaManagedAgentsCredentialNetworkingParams"}]},"injectionLocation":{"ref":"BetaManagedAgentsInjectionLocationParams"}}}',
     ),
   ],
 
   [
     "BetaManagedAgentsEnvironmentVariableUpdateParams",
     parseRuntimeSchema(
-      '{"type":"object","required":["type"],"properties":{"type":{"type":"string","enum":["environment_variable"]},"secretValue":{"anyOf":[{"type":"string","minLength":1,"maxLength":4096},{"type":"null"}]},"networking":{"ref":"BetaManagedAgentsCredentialNetworkingParams"},"injectionLocation":{"allOf":[{"ref":"BetaManagedAgentsInjectionLocationUpdateParams"}]}}}',
+      '{"type":"object","required":["type"],"properties":{"type":{"type":"string","enum":["environment_variable"]},"secretValue":{"anyOf":[{"type":"string","minLength":1,"maxLength":4096},{"type":"null"}]},"networking":{"ref":"BetaManagedAgentsCredentialNetworkingParams"},"injectionLocation":{"ref":"BetaManagedAgentsInjectionLocationUpdateParams"}}}',
     ),
   ],
 

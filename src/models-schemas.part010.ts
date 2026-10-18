@@ -7,6 +7,13 @@ const parseRuntimeSchema = (source: string): RuntimeSchema => JSON.parse(source)
 
 export const modelSchemasPart010: readonly (readonly [string, RuntimeSchema])[] = [
   [
+    "BetaExternalKeyCreateParams",
+    parseRuntimeSchema(
+      '{"type":"object","required":["providerConfig"],"properties":{"displayName":{"anyOf":[{"type":"string","minLength":1,"maxLength":255},{"type":"null"}]},"geo":{"type":"string"},"providerConfig":{"ref":"BetaExternalKeyCreateParamsProviderConfig"}}}',
+    ),
+  ],
+
+  [
     "BetaExternalKeyListResponse",
     parseRuntimeSchema(
       '{"type":"object","required":["data","nextPage"],"properties":{"data":{"type":"array","items":{"ref":"BetaExternalKey"}},"nextPage":{"type":"string","nullable":true}}}',

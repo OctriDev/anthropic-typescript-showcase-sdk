@@ -74,10 +74,14 @@ export interface BetaManagedAgentsSessionUsageSnapshot {
   cacheCreation?: BetaManagedAgentsCacheCreationUsage;
   /**
    * Cumulative list cost of the session across all turns, priced at public list rates.
+
+   * @example {"currency":"USD","amount":"2500"}
    */
   listCost?: BetaMonetaryAmount;
   /**
    * Cumulative server-executed tool usage across all turns.
+
+   * @example {"web_search_requests":3,"web_fetch_requests":0}
    */
   serverToolUse?: BetaManagedAgentsServerToolUsage;
   /**
@@ -593,18 +597,4 @@ export interface BetaManagedAgentsURLMCPServerParams {
    * Endpoint URL for the MCP server.
    */
   url: string;
-}
-
-/**
- * Attribution for a write made by a human user through the Anthropic Console.
- */
-export interface BetaManagedAgentsUserActor {
-  /**
-   * Required enumerated value serialized in the `type` wire field.
-   */
-  type: "user_actor";
-  /**
-   * ID of the user who performed the write (a `user_...` value).
-   */
-  userId: string;
 }
