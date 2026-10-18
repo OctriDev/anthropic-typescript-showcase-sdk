@@ -7,6 +7,13 @@ const parseRuntimeSchema = (source: string): RuntimeSchema => JSON.parse(source)
 
 export const modelSchemasPart007: readonly (readonly [string, RuntimeSchema])[] = [
   [
+    "BetaWebhookSessionRunningEventData",
+    parseRuntimeSchema(
+      '{"type":"object","required":["type","id","organizationId","workspaceId"],"properties":{"type":{"type":"string"},"id":{"type":"string"},"organizationId":{"type":"string"},"workspaceId":{"type":"string"}}}',
+    ),
+  ],
+
+  [
     "BetaWebhookSessionStatusIdledEventData",
     parseRuntimeSchema(
       '{"type":"object","required":["type","id","organizationId","workspaceId"],"properties":{"type":{"type":"string"},"id":{"type":"string"},"organizationId":{"type":"string"},"workspaceId":{"type":"string"}}}',
@@ -696,13 +703,6 @@ export const modelSchemasPart007: readonly (readonly [string, RuntimeSchema])[] 
     "RequestCodeExecutionToolResultBlock",
     parseRuntimeSchema(
       '{"type":"object","required":["content","toolUseId","type"],"properties":{"cacheControl":{"nullable":true,"oneOf":[{"ref":"CacheControlEphemeral"}]},"content":{"ref":"RequestCodeExecutionToolResultBlockContent"},"toolUseId":{"type":"string","pattern":"^srvtoolu_[a-zA-Z0-9_]+$"},"type":{"type":"string"}}}',
-    ),
-  ],
-
-  [
-    "RequestCodeExecutionToolResultError",
-    parseRuntimeSchema(
-      '{"type":"object","required":["errorCode","type"],"properties":{"errorCode":{"ref":"CodeExecutionToolResultErrorCode"},"type":{"type":"string"}}}',
     ),
   ],
 ];

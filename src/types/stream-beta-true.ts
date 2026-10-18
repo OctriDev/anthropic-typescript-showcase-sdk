@@ -84,6 +84,8 @@ export interface BetaManagedAgentsEventDeltaEvent_ContentDelta {
   index?: number;
   /**
    * A partial element of the content array at index, typed like the element itself — the same shape the buffered agent.message carries in content.
+
+   * @example {"type":"text","text":"Where is my order #1234?"}
    */
   content: BetaManagedAgentsTextBlock;
 }

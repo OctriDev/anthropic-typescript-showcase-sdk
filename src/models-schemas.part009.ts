@@ -7,6 +7,13 @@ const parseRuntimeSchema = (source: string): RuntimeSchema => JSON.parse(source)
 
 export const modelSchemasPart009: readonly (readonly [string, RuntimeSchema])[] = [
   [
+    "WebFetchTool_20260209",
+    parseRuntimeSchema(
+      '{"type":"object","required":["name","type"],"properties":{"allowedCallers":{"type":"array","items":{"ref":"AllowedCaller"}},"allowedDomains":{"type":"array","nullable":true,"items":{"type":"string"}},"blockedDomains":{"type":"array","nullable":true,"items":{"type":"string"}},"cacheControl":{"nullable":true,"oneOf":[{"ref":"CacheControlEphemeral"}]},"citations":{"ref":"RequestCitationsConfig"},"deferLoading":{"type":"boolean"},"maxContentTokens":{"anyOf":[{"type":"integer","exclusiveMinimum":0},{"type":"null"}]},"maxUses":{"anyOf":[{"type":"integer","exclusiveMinimum":0},{"type":"null"}]},"name":{"type":"string"},"strict":{"type":"boolean"},"type":{"type":"string"}}}',
+    ),
+  ],
+
+  [
     "WebFetchTool_20260309",
     parseRuntimeSchema(
       '{"type":"object","required":["name","type"],"properties":{"allowedCallers":{"type":"array","items":{"ref":"AllowedCaller"}},"allowedDomains":{"type":"array","nullable":true,"items":{"type":"string"}},"blockedDomains":{"type":"array","nullable":true,"items":{"type":"string"}},"cacheControl":{"nullable":true,"oneOf":[{"ref":"CacheControlEphemeral"}]},"citations":{"ref":"RequestCitationsConfig"},"deferLoading":{"type":"boolean"},"maxContentTokens":{"anyOf":[{"type":"integer","exclusiveMinimum":0},{"type":"null"}]},"maxUses":{"anyOf":[{"type":"integer","exclusiveMinimum":0},{"type":"null"}]},"name":{"type":"string"},"strict":{"type":"boolean"},"type":{"type":"string"},"useCache":{"type":"boolean"}}}',
@@ -696,13 +703,6 @@ export const modelSchemasPart009: readonly (readonly [string, RuntimeSchema])[] 
     "BetaExternalKey",
     parseRuntimeSchema(
       '{"type":"object","required":["attachment","createdAt","displayName","geo","id","providerConfig","type","updatedAt"],"properties":{"attachment":{"ref":"BetaExternalKeyAttachment"},"createdAt":{"type":"string","format":"date-time"},"displayName":{"type":"string","nullable":true},"geo":{"type":"string"},"id":{"type":"string"},"providerConfig":{"ref":"BetaExternalKeyProviderConfig"},"type":{"type":"string"},"updatedAt":{"type":"string","format":"date-time"}}}',
-    ),
-  ],
-
-  [
-    "BetaExternalKeyCreateParams",
-    parseRuntimeSchema(
-      '{"type":"object","required":["providerConfig"],"properties":{"displayName":{"anyOf":[{"type":"string","minLength":1,"maxLength":255},{"type":"null"}]},"geo":{"type":"string"},"providerConfig":{"ref":"BetaExternalKeyCreateParamsProviderConfig"}}}',
     ),
   ],
 ];

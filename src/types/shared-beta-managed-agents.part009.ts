@@ -21,6 +21,20 @@ import type {
 import type { BetaTimestamp } from "./shared-beta.part001";
 
 /**
+ * Attribution for a write made by a human user through the Anthropic Console.
+ */
+export interface BetaManagedAgentsUserActor {
+  /**
+   * Required enumerated value serialized in the `type` wire field.
+   */
+  type: "user_actor";
+  /**
+   * ID of the user who performed the write (a `user_...` value).
+   */
+  userId: string;
+}
+
+/**
  * A `BetaManagedAgentsUserContentBlock` whose `type` names no branch this SDK knows, kept as received.
  */
 export interface UnknownBetaManagedAgentsUserContentBlock {

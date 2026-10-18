@@ -135,7 +135,14 @@ export const modelSchemasPart004: readonly (readonly [string, RuntimeSchema])[] 
   [
     "BetaManagedAgentsSessionUsageEvent",
     parseRuntimeSchema(
-      '{"type":"object","required":["type","id","processedAt","usage"],"properties":{"type":{"type":"string","enum":["session.usage"]},"id":{"type":"string"},"processedAt":{"allOf":[{"ref":"BetaTimestamp"}]},"usage":{"allOf":[{"ref":"BetaManagedAgentsSessionUsageSnapshot"}]},"budget":{"ref":"BetaManagedAgentsBudget"}}}',
+      '{"type":"object","required":["type","id","processedAt","usage"],"properties":{"type":{"type":"string","enum":["session.usage"]},"id":{"type":"string"},"processedAt":{"allOf":[{"ref":"BetaTimestamp"}]},"usage":{"ref":"BetaManagedAgentsSessionUsageSnapshot"},"budget":{"ref":"BetaManagedAgentsBudget"}}}',
+    ),
+  ],
+
+  [
+    "BetaManagedAgentsSessionUsageSnapshot",
+    parseRuntimeSchema(
+      '{"type":"object","properties":{"inputTokens":{"type":"integer"},"outputTokens":{"type":"integer"},"cacheReadInputTokens":{"type":"integer"},"cacheCreation":{"ref":"BetaManagedAgentsCacheCreationUsage"},"listCost":{"ref":"BetaMonetaryAmount"},"serverToolUse":{"ref":"BetaManagedAgentsServerToolUsage"},"activeSeconds":{"type":"number"}}}',
     ),
   ],
 
@@ -156,7 +163,7 @@ export const modelSchemasPart004: readonly (readonly [string, RuntimeSchema])[] 
   [
     "BetaManagedAgentsSpanModelRequestEndEvent",
     parseRuntimeSchema(
-      '{"type":"object","required":["type","id","processedAt","isError","modelUsage","modelRequestStartId"],"properties":{"type":{"type":"string","enum":["span.model_request_end"]},"id":{"type":"string"},"processedAt":{"allOf":[{"ref":"BetaTimestamp"}]},"isError":{"type":"boolean","nullable":true},"modelUsage":{"allOf":[{"ref":"BetaManagedAgentsSpanModelUsage"}]},"modelRequestStartId":{"type":"string"}}}',
+      '{"type":"object","required":["type","id","processedAt","isError","modelUsage","modelRequestStartId"],"properties":{"type":{"type":"string","enum":["span.model_request_end"]},"id":{"type":"string"},"processedAt":{"allOf":[{"ref":"BetaTimestamp"}]},"isError":{"type":"boolean","nullable":true},"modelUsage":{"ref":"BetaManagedAgentsSpanModelUsage"},"modelRequestStartId":{"type":"string"}}}',
     ),
   ],
 
@@ -177,7 +184,7 @@ export const modelSchemasPart004: readonly (readonly [string, RuntimeSchema])[] 
   [
     "BetaManagedAgentsSpanOutcomeEvaluationEndEvent",
     parseRuntimeSchema(
-      '{"type":"object","required":["type","id","processedAt","outcomeEvaluationStartId","iteration","result","explanation","usage","outcomeId"],"properties":{"type":{"type":"string","enum":["span.outcome_evaluation_end"]},"id":{"type":"string"},"processedAt":{"allOf":[{"ref":"BetaTimestamp"}]},"outcomeEvaluationStartId":{"type":"string"},"iteration":{"type":"integer"},"result":{"type":"string"},"explanation":{"type":"string"},"usage":{"allOf":[{"ref":"BetaManagedAgentsSpanModelUsage"}]},"outcomeId":{"type":"string"}}}',
+      '{"type":"object","required":["type","id","processedAt","outcomeEvaluationStartId","iteration","result","explanation","usage","outcomeId"],"properties":{"type":{"type":"string","enum":["span.outcome_evaluation_end"]},"id":{"type":"string"},"processedAt":{"allOf":[{"ref":"BetaTimestamp"}]},"outcomeEvaluationStartId":{"type":"string"},"iteration":{"type":"integer"},"result":{"type":"string"},"explanation":{"type":"string"},"usage":{"ref":"BetaManagedAgentsSpanModelUsage"},"outcomeId":{"type":"string"}}}',
     ),
   ],
 
@@ -696,13 +703,6 @@ export const modelSchemasPart004: readonly (readonly [string, RuntimeSchema])[] 
     "BetaOutputTokensDetails",
     parseRuntimeSchema(
       '{"type":"object","required":["thinkingTokens"],"properties":{"thinkingTokens":{"type":"integer","minimum":0}}}',
-    ),
-  ],
-
-  [
-    "BetaOverloadedError",
-    parseRuntimeSchema(
-      '{"type":"object","required":["message","type"],"properties":{"message":{"type":"string"},"type":{"type":"string"}}}',
     ),
   ],
 ];

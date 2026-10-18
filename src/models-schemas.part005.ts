@@ -7,6 +7,13 @@ const parseRuntimeSchema = (source: string): RuntimeSchema => JSON.parse(source)
 
 export const modelSchemasPart005: readonly (readonly [string, RuntimeSchema])[] = [
   [
+    "BetaOverloadedError",
+    parseRuntimeSchema(
+      '{"type":"object","required":["message","type"],"properties":{"message":{"type":"string"},"type":{"type":"string"}}}',
+    ),
+  ],
+
+  [
     "BetaPackages",
     parseRuntimeSchema(
       '{"type":"object","required":["apt","cargo","gem","go","npm","pip"],"properties":{"apt":{"type":"array","items":{"type":"string"}},"cargo":{"type":"array","items":{"type":"string"}},"gem":{"type":"array","items":{"type":"string"}},"go":{"type":"array","items":{"type":"string"}},"npm":{"type":"array","items":{"type":"string"}},"pip":{"type":"array","items":{"type":"string"}},"type":{"type":"string"}}}',
@@ -696,13 +703,6 @@ export const modelSchemasPart005: readonly (readonly [string, RuntimeSchema])[] 
     "BetaResponseToolSearchToolResultError",
     parseRuntimeSchema(
       '{"type":"object","required":["errorCode","errorMessage","type"],"properties":{"errorCode":{"ref":"BetaToolSearchToolResultErrorCode"},"errorMessage":{"type":"string","nullable":true},"type":{"type":"string"}}}',
-    ),
-  ],
-
-  [
-    "BetaResponseToolSearchToolSearchResultBlock",
-    parseRuntimeSchema(
-      '{"type":"object","required":["toolReferences","type"],"properties":{"toolReferences":{"type":"array","items":{"ref":"BetaResponseToolReferenceBlock"}},"type":{"type":"string"}}}',
     ),
   ],
 ];

@@ -43,10 +43,10 @@ import type {
   BetaManagedAgentsStruct,
   BetaManagedAgentsTextBlock,
   BetaManagedAgentsToolResultContentBlock,
-  BetaManagedAgentsUserActor,
 } from "./shared-beta-managed-agents.part008";
 
 import type {
+  BetaManagedAgentsUserActor,
   BetaManagedAgentsUserContentBlock,
   BetaManagedAgentsWebFetchToolConfig,
   BetaManagedAgentsWebFetchToolConfigParams,
