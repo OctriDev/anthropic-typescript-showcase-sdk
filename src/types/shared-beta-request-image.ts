@@ -7,7 +7,7 @@ import type { BetaCacheControlEphemeral } from "./shared-beta-cache";
 
 import type { BetaFileImageSource } from "./shared-beta-file";
 
-import type { BetaURLImageSource } from "./shared-beta.part002";
+import type { BetaURLImageSource } from "./shared-beta-token-task-budget";
 
 /**
  * Typed representation of the `BetaRequestImageBlock` API schema.

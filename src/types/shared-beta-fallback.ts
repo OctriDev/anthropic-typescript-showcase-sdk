@@ -9,13 +9,13 @@ import type { BetaOutputConfig } from "./shared-beta-output";
 
 import type { BetaRefusalCategory } from "./shared-beta-refusal";
 
+import type { BetaSpeed } from "./shared-beta-shared";
+
 import type {
   BetaThinkingConfigAdaptive,
   BetaThinkingConfigDisabled,
   BetaThinkingConfigEnabled,
 } from "./shared-beta-thinking";
-
-import type { BetaSpeed } from "./shared-beta.part001";
 
 /**
  * One entry in the `fallbacks` chain on a `/v1/messages` request.

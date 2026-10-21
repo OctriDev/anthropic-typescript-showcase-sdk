@@ -7,7 +7,7 @@ import type { BetaAdvisorTool_20260301 } from "./shared-beta-advisor";
 
 import type { BetaBashTool_20241022, BetaBashTool_20250124 } from "./shared-beta-bash";
 
-import type { BetaBrowserToolset_20260801 } from "./shared-beta-browser.part001";
+import type { BetaBrowserToolset_20260801 } from "./shared-beta-browser-shared";
 
 import type { BetaCacheControlEphemeral } from "./shared-beta-cache";
 
@@ -44,6 +44,13 @@ import type { BetaRequestMCPServerURLDefinition } from "./shared-beta-request-mc
 import type { BetaRequestTextBlock } from "./shared-beta-request-text";
 
 import type {
+  BetaMCPToolset,
+  BetaMemoryTool_20250818,
+  BetaMetadata,
+  BetaSpeed,
+} from "./shared-beta-shared";
+
+import type {
   BetaTextEditor_20241022,
   BetaTextEditor_20250124,
   BetaTextEditor_20250429,
@@ -68,13 +75,6 @@ import type {
   BetaWebSearchTool_20260209,
   BetaWebSearchTool_20260318,
 } from "./shared-beta-web";
-
-import type {
-  BetaMCPToolset,
-  BetaMemoryTool_20250818,
-  BetaMetadata,
-  BetaSpeed,
-} from "./shared-beta.part001";
 
 /**
  * Typed representation of the `BetaCreateMessageParams` API schema.

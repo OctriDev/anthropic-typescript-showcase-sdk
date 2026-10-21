@@ -3,7 +3,7 @@
 
 import type { BetaAzureExternalKeyConfigParams } from "./shared-beta-azure";
 
-import type { BetaAwsExternalKeyConfig, BetaGcpExternalKeyConfig } from "./shared-beta.part001";
+import type { BetaAwsExternalKeyConfig, BetaGcpExternalKeyConfig } from "./shared-beta-shared";
 
 /**
  * Typed representation of the `BetaDeleteExternalKeyResponse` API schema.

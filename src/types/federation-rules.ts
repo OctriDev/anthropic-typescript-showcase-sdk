@@ -3,7 +3,7 @@
 
 import type { BetaServiceAccountTarget } from "./shared-beta-service";
 
-import type { BetaRuleMatch } from "./shared-beta.part001";
+import type { BetaRuleMatch } from "./shared-beta-shared";
 
 /**
  * Partial update. Set fields are applied; omitted fields are unchanged.

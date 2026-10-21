@@ -5,7 +5,7 @@ import type { BetaFederationRule } from "./shared-beta-federation";
 
 import type { BetaServiceAccountTarget } from "./shared-beta-service";
 
-import type { BetaRuleMatch } from "./shared-beta.part001";
+import type { BetaRuleMatch } from "./shared-beta-shared";
 
 /**
  * Typed representation of the `BetaFederationRuleCreateParams` API schema.

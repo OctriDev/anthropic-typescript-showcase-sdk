@@ -3,7 +3,7 @@
 
 import type { BetaOrganizationRoleSchema } from "./shared-beta-organization";
 
-import type { BetaTimestamp } from "./shared-beta.part001";
+import type { BetaTimestamp } from "./shared-beta-shared";
 
 /**
  * Typed representation of the `BetaUser` API schema.

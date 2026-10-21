@@ -11,9 +11,9 @@ import type { ClientConfig, RequestOptions } from "../../../../client";
 import { fromWire, queryValue, sdkDecode, SdkPage, sdkRequest } from "../../../../client";
 import { validateItems } from "../../../../validation";
 
-export type ListBetaOrganizationsAnalyticsPluginsError = BetaErrorResponse;
+export type ListBetaOrganizationAnalyticsPluginsError = BetaErrorResponse;
 
-export interface ListBetaOrganizationsAnalyticsPluginsParams {
+export interface ListBetaOrganizationAnalyticsPluginsParams {
   date?: string | null;
   startingDate?: string | null;
   endingDate?: string | null;
@@ -25,7 +25,7 @@ export interface ListBetaOrganizationsAnalyticsPluginsParams {
   order?: "asc" | "desc" | (string & {}) | null;
 }
 
-async function _listBetaOrganizationsAnalyticsPlugins(
+async function _listBetaOrganizationAnalyticsPlugins(
   config: ClientConfig,
   {
     date,
@@ -37,7 +37,7 @@ async function _listBetaOrganizationsAnalyticsPlugins(
     filter,
     orderBy,
     order,
-  }: ListBetaOrganizationsAnalyticsPluginsParams = {},
+  }: ListBetaOrganizationAnalyticsPluginsParams = {},
   requestOptions?: RequestOptions,
 ): Promise<BetaAnalyticsPluginsResponse> {
   if (groupBy != null) {
@@ -51,7 +51,7 @@ async function _listBetaOrganizationsAnalyticsPlugins(
   const _resp = await sdkRequest<BetaAnalyticsPluginsResponse>({
     method: "GET",
     path: `/v1/organizations/analytics/plugins?beta=true`,
-    operationId: "listBetaOrganizationsAnalyticsPlugins",
+    operationId: "listBetaOrganizationAnalyticsPlugins",
     errors: {
       "400": "BetaErrorResponse",
       "401": "BetaErrorResponse",
@@ -149,14 +149,14 @@ async function _listBetaOrganizationsAnalyticsPlugins(
  *   ranking). Applies to `order_by`, or to the endpoint's default sort field when
  *   `order_by` is omitted.
  */
-export async function* listBetaOrganizationsAnalyticsPlugins(
+export async function* listBetaOrganizationAnalyticsPlugins(
   config: ClientConfig,
-  params: ListBetaOrganizationsAnalyticsPluginsParams = {},
+  params: ListBetaOrganizationAnalyticsPluginsParams = {},
   requestOptions?: RequestOptions,
 ): AsyncGenerator<BetaAnalyticsPluginActivity> {
   let _cursor = params.page;
   while (true) {
-    const _page = await _listBetaOrganizationsAnalyticsPlugins(
+    const _page = await _listBetaOrganizationAnalyticsPlugins(
       config,
       { ...params, page: _cursor },
       requestOptions,
@@ -170,14 +170,14 @@ export async function* listBetaOrganizationsAnalyticsPlugins(
   }
 }
 
-export async function* listBetaOrganizationsAnalyticsPluginsPages(
+export async function* listBetaOrganizationAnalyticsPluginsPages(
   config: ClientConfig,
-  params: ListBetaOrganizationsAnalyticsPluginsParams = {},
+  params: ListBetaOrganizationAnalyticsPluginsParams = {},
   requestOptions?: RequestOptions,
 ): AsyncGenerator<SdkPage<BetaAnalyticsPluginsResponse, BetaAnalyticsPluginActivity>> {
   let _cursor = params.page;
   while (true) {
-    const _page = await _listBetaOrganizationsAnalyticsPlugins(
+    const _page = await _listBetaOrganizationAnalyticsPlugins(
       config,
       { ...params, page: _cursor },
       requestOptions,
@@ -199,15 +199,15 @@ export class BetaOrganizationsAnalyticsPluginsNamespace {
    * Get per-plugin install + invocation usage for a given day, with pagination. Returns plugin usage metrics for the organization across Cowork and Claude Code, sorted by plugin name. The `plugin_name` value `third-party` is an aggregate bucket, not a plugin: it collects plugin activity, from either surface, for which the reporting client did not provide a plugin name — so an organization's own plugins can contribute both to their own named rows and to this bucket. Use `group_by[]` to break usage out per member, per RBAC group, or per product surface (Cowork / Claude Code), and `filter[]` to scope results; the parameter descriptions list the supported dimensions. Requires an API key with the `read:analytics` scope. `starting_date` / `ending_date` select range-rollup mode like `/skills`.
    */
   list(
-    params: ListBetaOrganizationsAnalyticsPluginsParams = {},
+    params: ListBetaOrganizationAnalyticsPluginsParams = {},
     requestOptions?: RequestOptions,
-  ): ReturnType<typeof listBetaOrganizationsAnalyticsPlugins> {
-    return listBetaOrganizationsAnalyticsPlugins(this._config, params, requestOptions);
+  ): ReturnType<typeof listBetaOrganizationAnalyticsPlugins> {
+    return listBetaOrganizationAnalyticsPlugins(this._config, params, requestOptions);
   }
   listPages(
-    params: ListBetaOrganizationsAnalyticsPluginsParams = {},
+    params: ListBetaOrganizationAnalyticsPluginsParams = {},
     requestOptions?: RequestOptions,
-  ): ReturnType<typeof listBetaOrganizationsAnalyticsPluginsPages> {
-    return listBetaOrganizationsAnalyticsPluginsPages(this._config, params, requestOptions);
+  ): ReturnType<typeof listBetaOrganizationAnalyticsPluginsPages> {
+    return listBetaOrganizationAnalyticsPluginsPages(this._config, params, requestOptions);
   }
 }

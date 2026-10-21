@@ -6163,7 +6163,7 @@
     }
   },
   {
-    "operationId": "listBetaOrganizationsAnalyticsPlugins",
+    "operationId": "listBetaOrganizationAnalyticsPlugins",
     "summary": "Get per-plugin install + invocation usage for a given day, with pagination.\n\nReturns plugin usage metrics for the organization across Cowork and Claude\nCode, sorted by plugin name. The `plugin_name` value `third-party` is\nan aggregate bucket, not a plugin: it collects plugin activity, from\neither surface, for which the reporting client did not provide a plugin\nname — so an organization's own plugins can contribute both to their own\nnamed rows and to this bucket. Use `group_by[]` to break usage out per\nmember, per RBAC group, or per product surface (Cowork / Claude Code),\nand `filter[]` to scope results; the parameter descriptions list the\nsupported dimensions. Requires an API key with the\n`read:analytics` scope. `starting_date` / `ending_date` select\nrange-rollup mode like `/skills`.",
     "method": "GET",
     "pathTemplate": "/v1/organizations/analytics/plugins?beta=true",

@@ -7,9 +7,9 @@ import type {
   BetaAttachedAttachment,
   BetaAwsExternalKeyConfig,
   BetaGcpExternalKeyConfig,
-} from "./shared-beta.part001";
+} from "./shared-beta-shared";
 
-import type { BetaUnattachedAttachment } from "./shared-beta.part002";
+import type { BetaUnattachedAttachment } from "./shared-beta-token-task-budget";
 
 /**
  * CMEK external key config belonging to the caller's organization.

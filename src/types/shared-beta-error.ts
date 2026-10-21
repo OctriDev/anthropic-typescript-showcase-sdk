@@ -11,7 +11,7 @@ import type {
   BetaOverloadedError,
   BetaPermissionError,
   BetaRateLimitError,
-} from "./shared-beta.part001";
+} from "./shared-beta-shared";
 
 /**
  * Typed representation of the `BetaErrorResponse` API schema.

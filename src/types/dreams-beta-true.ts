@@ -5,7 +5,7 @@ import type { BetaDream, BetaDreamInput } from "./shared-beta-dream";
 
 import type { BetaOutputBehavior } from "./shared-beta-output";
 
-import type { BetaSpeed } from "./shared-beta.part001";
+import type { BetaSpeed } from "./shared-beta-shared";
 
 /**
  * Typed representation of the `BetaCreateDreamRequest` API schema.

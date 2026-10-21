@@ -5,9 +5,9 @@ import type { BetaContextManagementCapability } from "./shared-beta-context";
 
 import type { BetaEffortCapability } from "./shared-beta-effort";
 
-import type { BetaThinkingCapability } from "./shared-beta-thinking";
+import type { BetaCapabilitySupport } from "./shared-beta-shared";
 
-import type { BetaCapabilitySupport } from "./shared-beta.part001";
+import type { BetaThinkingCapability } from "./shared-beta-thinking";
 
 /**
  * Model capability information.

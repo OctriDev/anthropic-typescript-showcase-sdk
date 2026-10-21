@@ -3,7 +3,7 @@
 
 import type { BetaOutputBehavior } from "./shared-beta-output";
 
-import type { BetaSpeed, BetaTimestamp } from "./shared-beta.part001";
+import type { BetaSpeed, BetaTimestamp } from "./shared-beta-shared";
 
 /**
  * An asynchronous memory-consolidation job that reads a memory store plus a set of session transcripts and writes consolidated memories into an output memory store — a new store by default, or an existing store chosen via output_behavior. The Dreams API is in research preview: the request and response shapes are volatile and may change without the deprecation period that applies to generally-available endpoints.

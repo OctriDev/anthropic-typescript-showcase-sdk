@@ -12,7 +12,7 @@ import type {
   BetaPermissionError,
   BetaRateLimitError,
   BetaTargetStoreHeldError,
-} from "./shared-beta.part001";
+} from "./shared-beta-shared";
 
 /**
  * A `BetaDreamingError` whose `type` names no branch this SDK knows, kept as received.

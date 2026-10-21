@@ -3,7 +3,7 @@
 
 import type { BetaClearThinking20251015, BetaClearToolUses20250919 } from "./shared-beta-clear";
 
-import type { BetaCapabilitySupport, BetaCompact20260112 } from "./shared-beta.part001";
+import type { BetaCapabilitySupport, BetaCompact20260112 } from "./shared-beta-shared";
 
 /**
  * Context management capability details.

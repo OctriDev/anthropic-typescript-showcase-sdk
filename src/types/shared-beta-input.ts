@@ -47,7 +47,7 @@ import type {
   BetaRequestWebSearchToolResultBlock,
 } from "./shared-beta-request-web";
 
-import type { BetaSystemMessageOutputConfig } from "./shared-beta.part001";
+import type { BetaSystemMessageOutputConfig } from "./shared-beta-shared";
 
 /**
  * A `BetaInputContentBlock` whose `type` names no branch this SDK knows, kept as received.

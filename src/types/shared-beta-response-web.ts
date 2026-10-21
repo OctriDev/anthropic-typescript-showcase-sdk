@@ -5,12 +5,12 @@ import type { BetaResponseDocumentBlock } from "./shared-beta-response-document"
 
 import type { BetaServerToolCaller, BetaServerToolCaller_20260120 } from "./shared-beta-server";
 
+import type { BetaDirectCaller } from "./shared-beta-shared";
+
 import type {
   BetaWebFetchToolResultErrorCode,
   BetaWebSearchToolResultErrorCode,
 } from "./shared-beta-web";
-
-import type { BetaDirectCaller } from "./shared-beta.part001";
 
 /**
  * Typed representation of the `BetaResponseWebFetchResultBlock` API schema.

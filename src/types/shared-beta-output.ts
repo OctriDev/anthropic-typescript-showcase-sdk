@@ -5,7 +5,7 @@ import type { BetaEffortLevel } from "./shared-beta-effort";
 
 import type { BetaJsonOutputFormat } from "./shared-beta-json";
 
-import type { BetaTokenTaskBudget } from "./shared-beta.part002";
+import type { BetaTokenTaskBudget } from "./shared-beta-token-task-budget";
 
 /**
  * A `BetaOutputBehavior` whose `type` names no branch this SDK knows, kept as received.

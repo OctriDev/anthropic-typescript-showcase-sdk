@@ -17,11 +17,11 @@ import type { BetaRequestCounts } from "./shared-beta-request";
 
 import type { BetaResponseContextManagement } from "./shared-beta-response-context";
 
+import type { BetaStopReason } from "./shared-beta-shared";
+
 import type { BetaThinkingDroppedInputTransformation } from "./shared-beta-thinking";
 
 import type { BetaUsage } from "./shared-beta-usage";
-
-import type { BetaStopReason } from "./shared-beta.part001";
 
 /**
  * Typed representation of the `BetaMessage` API schema.

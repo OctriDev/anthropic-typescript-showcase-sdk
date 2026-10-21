@@ -2,22 +2,9 @@
 // This file is machine-generated from your OpenAPI spec.
 
 import type {
-  BetaManagedAgentsAgentCustomToolUseEvent,
-  BetaManagedAgentsAgentMcpToolResultEvent,
-  BetaManagedAgentsAgentMcpToolUseEvent,
-  BetaManagedAgentsAgentMessageEvent,
-  BetaManagedAgentsAgentThinkingEvent,
-  BetaManagedAgentsAgentThreadContextCompactedEvent,
-  BetaManagedAgentsAgentThreadMessageReceivedEvent,
-  BetaManagedAgentsAgentThreadMessageSentEvent,
-  BetaManagedAgentsAgentToolResultEvent,
-  BetaManagedAgentsAgentToolUseEvent,
-} from "./shared-beta-managed-agents.part001";
-
-import type {
   BetaManagedAgentsSessionDeletedEvent,
   BetaManagedAgentsSessionErrorEvent,
-} from "./shared-beta-managed-agents.part006";
+} from "./shared-beta-managed-agents-plain-text-document-source";
 
 import type {
   BetaManagedAgentsSessionStatusIdleEvent,
@@ -30,7 +17,7 @@ import type {
   BetaManagedAgentsSessionThreadStatusRunningEvent,
   BetaManagedAgentsSessionThreadStatusTerminatedEvent,
   BetaManagedAgentsSessionUpdatedEvent,
-} from "./shared-beta-managed-agents.part007";
+} from "./shared-beta-managed-agents-session-requires-action";
 
 import type {
   BetaManagedAgentsSessionUsageEvent,
@@ -41,7 +28,20 @@ import type {
   BetaManagedAgentsSpanOutcomeEvaluationStartEvent,
   BetaManagedAgentsSystemMessageEvent,
   BetaManagedAgentsTextBlock,
-} from "./shared-beta-managed-agents.part008";
+} from "./shared-beta-managed-agents-session-usage-event";
+
+import type {
+  BetaManagedAgentsAgentCustomToolUseEvent,
+  BetaManagedAgentsAgentMcpToolResultEvent,
+  BetaManagedAgentsAgentMcpToolUseEvent,
+  BetaManagedAgentsAgentMessageEvent,
+  BetaManagedAgentsAgentThinkingEvent,
+  BetaManagedAgentsAgentThreadContextCompactedEvent,
+  BetaManagedAgentsAgentThreadMessageReceivedEvent,
+  BetaManagedAgentsAgentThreadMessageSentEvent,
+  BetaManagedAgentsAgentToolResultEvent,
+  BetaManagedAgentsAgentToolUseEvent,
+} from "./shared-beta-managed-agents-shared";
 
 import type {
   BetaManagedAgentsUserCustomToolResultEvent,
@@ -50,7 +50,7 @@ import type {
   BetaManagedAgentsUserMessageEvent,
   BetaManagedAgentsUserToolConfirmationEvent,
   BetaManagedAgentsUserToolResultEvent,
-} from "./shared-beta-managed-agents.part009";
+} from "./shared-beta-managed-agents-user-actor";
 
 /**
  * An incremental update to an event that is still being streamed. Deltas are best-effort and may stop early; when the buffered event with id == event_id is produced it carries the complete content. A model request that ends early (an error or interrupt) produces no buffered event — its terminal span.model_request_end closes the preview. Only sent on stream connections that opt in via event_deltas; never appears in event history.

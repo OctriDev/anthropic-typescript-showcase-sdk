@@ -5,7 +5,7 @@ import type { BetaJwksDiscovery, BetaJwksExplicitUrl, BetaJwksInline } from "./s
 
 import type { BetaServiceAccountTarget } from "./shared-beta-service";
 
-import type { BetaIssuerPollStatus, BetaRuleMatch } from "./shared-beta.part001";
+import type { BetaIssuerPollStatus, BetaRuleMatch } from "./shared-beta-shared";
 
 /**
  * Registered external OIDC identity provider.

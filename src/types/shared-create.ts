@@ -5,7 +5,7 @@ import type { MemoryTool_20250818, Metadata, Model } from "./shared";
 
 import type { BashTool_20250124 } from "./shared-bash";
 
-import type { BrowserToolset_20260801 } from "./shared-browser.part001";
+import type { BrowserToolset_20260801 } from "./shared-browser-shared";
 
 import type { CacheControlEphemeral } from "./shared-cache";
 

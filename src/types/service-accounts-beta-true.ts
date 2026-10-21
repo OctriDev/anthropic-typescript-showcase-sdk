@@ -3,7 +3,7 @@
 
 import type { BetaServiceAccount } from "./shared-beta-service";
 
-import type { BetaNoBillingWorkspaceRoleSchema } from "./shared-beta.part001";
+import type { BetaNoBillingWorkspaceRoleSchema } from "./shared-beta-shared";
 
 /**
  * Typed representation of the `BetaServiceAccountCreateParams` API schema.
