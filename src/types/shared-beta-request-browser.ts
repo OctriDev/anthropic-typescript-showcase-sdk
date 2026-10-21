@@ -7,7 +7,7 @@ import type {
   BetaBrowserStateChangeDownloadStarted,
   BetaBrowserStateChangeTabOpened,
   BetaBrowserStateTabEntry,
-} from "./shared-beta-browser.part001";
+} from "./shared-beta-browser-shared";
 
 import type { BetaCacheControlEphemeral } from "./shared-beta-cache";
 

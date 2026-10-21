@@ -21,9 +21,9 @@ import type { BetaResponseContextManagement } from "./shared-beta-response-conte
 
 import type { BetaServerToolUsage } from "./shared-beta-server";
 
-import type { BetaThinkingDroppedInputTransformation } from "./shared-beta-thinking";
+import type { BetaIterationsUsage, BetaStopReason } from "./shared-beta-shared";
 
-import type { BetaIterationsUsage, BetaStopReason } from "./shared-beta.part001";
+import type { BetaThinkingDroppedInputTransformation } from "./shared-beta-thinking";
 
 /**
  * Typed representation of the `BetaMessageDelta` API schema.

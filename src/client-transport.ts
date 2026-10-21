@@ -504,7 +504,7 @@ const OPERATION_SECURITY: Readonly<Record<string, readonly (readonly string[])[]
 
   listBetaOrganizationsAnalyticsConnectors: [["ApiKeyAuth"]],
 
-  listBetaOrganizationsAnalyticsPlugins: [["ApiKeyAuth"]],
+  listBetaOrganizationAnalyticsPlugins: [["ApiKeyAuth"]],
 
   listBetaOrganizationsAnalyticsArtifacts: [["ApiKeyAuth"]],
 };

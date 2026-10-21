@@ -5,13 +5,13 @@ import type { BetaOrganizationScope } from "./shared-beta-organization";
 
 import type { BetaRbacGroupScope } from "./shared-beta-rbac";
 
-import type { BetaUserActorSchema, BetaUserScope } from "./shared-beta-user";
-
 import type {
   BetaOrgServiceScope,
   BetaScopedApiKeyActorSchema,
   BetaSeatTierScope,
-} from "./shared-beta.part001";
+} from "./shared-beta-shared";
+
+import type { BetaUserActorSchema, BetaUserScope } from "./shared-beta-user";
 
 /**
  * A configured spend limit: a cap on metered spend for one scope and period.

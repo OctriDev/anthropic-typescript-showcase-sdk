@@ -4,9 +4,9 @@
 import type {
   BetaManagedAgentsCredential,
   BetaManagedAgentsCredentialNetworkingParams,
-} from "./shared-beta-managed-agents.part002";
+} from "./shared-beta-managed-agents-always-allow-policy";
 
-import type { BetaTimestamp } from "./shared-beta.part001";
+import type { BetaTimestamp } from "./shared-beta-shared";
 
 /**
  * Typed representation of the `BetaManagedAgentsCreateCredentialRequestBody` API schema.

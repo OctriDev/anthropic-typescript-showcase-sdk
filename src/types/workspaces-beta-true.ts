@@ -5,9 +5,9 @@ import type { BetaAllowedInferenceGeo } from "./shared-beta-allowed";
 
 import type { BetaInferenceGeo } from "./shared-beta-inference";
 
-import type { BetaWorkspace } from "./shared-beta-workspace";
+import type { BetaNoBillingWorkspaceRoleSchema } from "./shared-beta-shared";
 
-import type { BetaNoBillingWorkspaceRoleSchema } from "./shared-beta.part001";
+import type { BetaWorkspace } from "./shared-beta-workspace";
 
 /**
  * Typed representation of the `BetaAddFederationRuleWorkspaceParams` API schema.

@@ -8,7 +8,7 @@ import type { BetaInferenceGeo, BetaInferenceGeoFilter } from "./shared-beta-inf
 import type {
   BetaCostReportTokenType,
   BetaMessagesUsageReportContextWindow,
-} from "./shared-beta.part001";
+} from "./shared-beta-shared";
 
 /**
  * Typed representation of the `BetaAnalyticsCostBucketedResponse` API schema.

@@ -5,7 +5,7 @@ import type { BetaLimitedNetwork, BetaLimitedNetworkParams } from "./shared-beta
 
 import type { BetaPackages, BetaPackagesParams } from "./shared-beta-packages";
 
-import type { BetaUnrestrictedNetwork } from "./shared-beta.part002";
+import type { BetaUnrestrictedNetwork } from "./shared-beta-token-task-budget";
 
 /**
  * `cloud` environment configuration.

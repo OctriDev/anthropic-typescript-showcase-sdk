@@ -3,7 +3,7 @@
 
 import type { BetaServerToolCaller, BetaServerToolCaller_20260120 } from "./shared-beta-server";
 
-import type { BetaDirectCaller } from "./shared-beta.part001";
+import type { BetaDirectCaller } from "./shared-beta-shared";
 
 /**
  * Typed representation of the `BetaResponseServerToolUseBlock` API schema.

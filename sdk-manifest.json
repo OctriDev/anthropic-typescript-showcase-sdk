@@ -47527,6 +47527,520 @@
       ]
     },
     {
+      "id": "listBetaOrganizationAnalyticsPlugins",
+      "wireOperationId": "listBetaOrganizationAnalyticsPlugins",
+      "method": "get",
+      "path": "/v1/organizations/analytics/plugins?beta=true",
+      "namespace": ["beta", "organizations", "analytics", "plugins"],
+      "streams": false,
+      "mode": "normal",
+      "streamSelector": null,
+      "requestMediaType": null,
+      "contentTypes": null,
+      "publicMethods": [
+        {
+          "mode": "normal",
+          "name": "listBetaOrganizationAnalyticsPlugins"
+        }
+      ],
+      "requestModes": [],
+      "responseModes": [
+        {
+          "statusCode": "200",
+          "mediaType": "application/json",
+          "decoderKind": "json",
+          "schemaRef": "#/components/schemas/BetaAnalyticsPluginsResponse",
+          "schemaType": {
+            "type": "ref",
+            "format": null,
+            "ref": "BetaAnalyticsPluginsResponse",
+            "nullable": false,
+            "items": null,
+            "mapValue": null,
+            "variants": null
+          },
+          "hasAuthoredExample": false,
+          "authoredExampleSource": "none"
+        }
+      ],
+      "errorResponseModes": [
+        {
+          "statusCode": "400",
+          "mediaType": "application/json",
+          "decoderKind": "json",
+          "schemaRef": "#/components/schemas/BetaErrorResponse",
+          "schemaType": {
+            "type": "ref",
+            "format": null,
+            "ref": "BetaErrorResponse",
+            "nullable": false,
+            "items": null,
+            "mapValue": null,
+            "variants": null
+          },
+          "hasAuthoredExample": false,
+          "authoredExampleSource": "none"
+        },
+        {
+          "statusCode": "401",
+          "mediaType": "application/json",
+          "decoderKind": "json",
+          "schemaRef": "#/components/schemas/BetaErrorResponse",
+          "schemaType": {
+            "type": "ref",
+            "format": null,
+            "ref": "BetaErrorResponse",
+            "nullable": false,
+            "items": null,
+            "mapValue": null,
+            "variants": null
+          },
+          "hasAuthoredExample": false,
+          "authoredExampleSource": "none"
+        },
+        {
+          "statusCode": "403",
+          "mediaType": "application/json",
+          "decoderKind": "json",
+          "schemaRef": "#/components/schemas/BetaErrorResponse",
+          "schemaType": {
+            "type": "ref",
+            "format": null,
+            "ref": "BetaErrorResponse",
+            "nullable": false,
+            "items": null,
+            "mapValue": null,
+            "variants": null
+          },
+          "hasAuthoredExample": false,
+          "authoredExampleSource": "none"
+        },
+        {
+          "statusCode": "404",
+          "mediaType": "application/json",
+          "decoderKind": "json",
+          "schemaRef": "#/components/schemas/BetaErrorResponse",
+          "schemaType": {
+            "type": "ref",
+            "format": null,
+            "ref": "BetaErrorResponse",
+            "nullable": false,
+            "items": null,
+            "mapValue": null,
+            "variants": null
+          },
+          "hasAuthoredExample": false,
+          "authoredExampleSource": "none"
+        },
+        {
+          "statusCode": "408",
+          "mediaType": "application/json",
+          "decoderKind": "json",
+          "schemaRef": "#/components/schemas/BetaErrorResponse",
+          "schemaType": {
+            "type": "ref",
+            "format": null,
+            "ref": "BetaErrorResponse",
+            "nullable": false,
+            "items": null,
+            "mapValue": null,
+            "variants": null
+          },
+          "hasAuthoredExample": false,
+          "authoredExampleSource": "none"
+        },
+        {
+          "statusCode": "409",
+          "mediaType": "application/json",
+          "decoderKind": "json",
+          "schemaRef": "#/components/schemas/BetaErrorResponse",
+          "schemaType": {
+            "type": "ref",
+            "format": null,
+            "ref": "BetaErrorResponse",
+            "nullable": false,
+            "items": null,
+            "mapValue": null,
+            "variants": null
+          },
+          "hasAuthoredExample": false,
+          "authoredExampleSource": "none"
+        },
+        {
+          "statusCode": "412",
+          "mediaType": "application/json",
+          "decoderKind": "json",
+          "schemaRef": "#/components/schemas/BetaErrorResponse",
+          "schemaType": {
+            "type": "ref",
+            "format": null,
+            "ref": "BetaErrorResponse",
+            "nullable": false,
+            "items": null,
+            "mapValue": null,
+            "variants": null
+          },
+          "hasAuthoredExample": false,
+          "authoredExampleSource": "none"
+        },
+        {
+          "statusCode": "413",
+          "mediaType": "application/json",
+          "decoderKind": "json",
+          "schemaRef": "#/components/schemas/BetaErrorResponse",
+          "schemaType": {
+            "type": "ref",
+            "format": null,
+            "ref": "BetaErrorResponse",
+            "nullable": false,
+            "items": null,
+            "mapValue": null,
+            "variants": null
+          },
+          "hasAuthoredExample": false,
+          "authoredExampleSource": "none"
+        },
+        {
+          "statusCode": "429",
+          "mediaType": "application/json",
+          "decoderKind": "json",
+          "schemaRef": "#/components/schemas/BetaErrorResponse",
+          "schemaType": {
+            "type": "ref",
+            "format": null,
+            "ref": "BetaErrorResponse",
+            "nullable": false,
+            "items": null,
+            "mapValue": null,
+            "variants": null
+          },
+          "hasAuthoredExample": false,
+          "authoredExampleSource": "none"
+        },
+        {
+          "statusCode": "431",
+          "mediaType": "application/json",
+          "decoderKind": "json",
+          "schemaRef": "#/components/schemas/BetaErrorResponse",
+          "schemaType": {
+            "type": "ref",
+            "format": null,
+            "ref": "BetaErrorResponse",
+            "nullable": false,
+            "items": null,
+            "mapValue": null,
+            "variants": null
+          },
+          "hasAuthoredExample": false,
+          "authoredExampleSource": "none"
+        },
+        {
+          "statusCode": "499",
+          "mediaType": "application/json",
+          "decoderKind": "json",
+          "schemaRef": "#/components/schemas/BetaErrorResponse",
+          "schemaType": {
+            "type": "ref",
+            "format": null,
+            "ref": "BetaErrorResponse",
+            "nullable": false,
+            "items": null,
+            "mapValue": null,
+            "variants": null
+          },
+          "hasAuthoredExample": false,
+          "authoredExampleSource": "none"
+        },
+        {
+          "statusCode": "500",
+          "mediaType": "application/json",
+          "decoderKind": "json",
+          "schemaRef": "#/components/schemas/BetaErrorResponse",
+          "schemaType": {
+            "type": "ref",
+            "format": null,
+            "ref": "BetaErrorResponse",
+            "nullable": false,
+            "items": null,
+            "mapValue": null,
+            "variants": null
+          },
+          "hasAuthoredExample": false,
+          "authoredExampleSource": "none"
+        },
+        {
+          "statusCode": "501",
+          "mediaType": "application/json",
+          "decoderKind": "json",
+          "schemaRef": "#/components/schemas/BetaErrorResponse",
+          "schemaType": {
+            "type": "ref",
+            "format": null,
+            "ref": "BetaErrorResponse",
+            "nullable": false,
+            "items": null,
+            "mapValue": null,
+            "variants": null
+          },
+          "hasAuthoredExample": false,
+          "authoredExampleSource": "none"
+        },
+        {
+          "statusCode": "503",
+          "mediaType": "application/json",
+          "decoderKind": "json",
+          "schemaRef": "#/components/schemas/BetaErrorResponse",
+          "schemaType": {
+            "type": "ref",
+            "format": null,
+            "ref": "BetaErrorResponse",
+            "nullable": false,
+            "items": null,
+            "mapValue": null,
+            "variants": null
+          },
+          "hasAuthoredExample": false,
+          "authoredExampleSource": "none"
+        },
+        {
+          "statusCode": "504",
+          "mediaType": "application/json",
+          "decoderKind": "json",
+          "schemaRef": "#/components/schemas/BetaErrorResponse",
+          "schemaType": {
+            "type": "ref",
+            "format": null,
+            "ref": "BetaErrorResponse",
+            "nullable": false,
+            "items": null,
+            "mapValue": null,
+            "variants": null
+          },
+          "hasAuthoredExample": false,
+          "authoredExampleSource": "none"
+        },
+        {
+          "statusCode": "529",
+          "mediaType": "application/json",
+          "decoderKind": "json",
+          "schemaRef": "#/components/schemas/BetaErrorResponse",
+          "schemaType": {
+            "type": "ref",
+            "format": null,
+            "ref": "BetaErrorResponse",
+            "nullable": false,
+            "items": null,
+            "mapValue": null,
+            "variants": null
+          },
+          "hasAuthoredExample": false,
+          "authoredExampleSource": "none"
+        }
+      ],
+      "params": [
+        {
+          "name": "date",
+          "in": "query",
+          "required": false,
+          "nullable": true,
+          "type": "anyOf",
+          "wireType": "string",
+          "declaredValue": null,
+          "style": "form",
+          "explode": true
+        },
+        {
+          "name": "ending_date",
+          "in": "query",
+          "required": false,
+          "nullable": true,
+          "type": "anyOf",
+          "wireType": "string",
+          "declaredValue": null,
+          "style": "form",
+          "explode": true
+        },
+        {
+          "name": "filter[]",
+          "in": "query",
+          "required": false,
+          "nullable": true,
+          "type": "array",
+          "wireType": "array",
+          "declaredValue": null,
+          "style": "form",
+          "explode": true
+        },
+        {
+          "name": "group_by[]",
+          "in": "query",
+          "required": false,
+          "nullable": true,
+          "type": "array",
+          "wireType": "array",
+          "declaredValue": null,
+          "style": "form",
+          "explode": true
+        },
+        {
+          "name": "limit",
+          "in": "query",
+          "required": false,
+          "nullable": true,
+          "type": "anyOf",
+          "wireType": "integer",
+          "declaredValue": null,
+          "style": "form",
+          "explode": true
+        },
+        {
+          "name": "order",
+          "in": "query",
+          "required": false,
+          "nullable": true,
+          "type": "anyOf",
+          "wireType": "string",
+          "declaredValue": "asc",
+          "style": "form",
+          "explode": true
+        },
+        {
+          "name": "order_by",
+          "in": "query",
+          "required": false,
+          "nullable": true,
+          "type": "string",
+          "wireType": "string",
+          "declaredValue": null,
+          "style": "form",
+          "explode": true
+        },
+        {
+          "name": "page",
+          "in": "query",
+          "required": false,
+          "nullable": true,
+          "type": "string",
+          "wireType": "string",
+          "declaredValue": null,
+          "style": "form",
+          "explode": true
+        },
+        {
+          "name": "starting_date",
+          "in": "query",
+          "required": false,
+          "nullable": true,
+          "type": "anyOf",
+          "wireType": "string",
+          "declaredValue": null,
+          "style": "form",
+          "explode": true
+        }
+      ],
+      "bindings": [
+        {
+          "name": "date",
+          "in": "query",
+          "required": false,
+          "nullable": true,
+          "type": "anyOf",
+          "wireType": "string",
+          "declaredValue": null,
+          "style": "form",
+          "explode": true
+        },
+        {
+          "name": "starting_date",
+          "in": "query",
+          "required": false,
+          "nullable": true,
+          "type": "anyOf",
+          "wireType": "string",
+          "declaredValue": null,
+          "style": "form",
+          "explode": true
+        },
+        {
+          "name": "ending_date",
+          "in": "query",
+          "required": false,
+          "nullable": true,
+          "type": "anyOf",
+          "wireType": "string",
+          "declaredValue": null,
+          "style": "form",
+          "explode": true
+        },
+        {
+          "name": "limit",
+          "in": "query",
+          "required": false,
+          "nullable": true,
+          "type": "anyOf",
+          "wireType": "integer",
+          "declaredValue": null,
+          "style": "form",
+          "explode": true
+        },
+        {
+          "name": "page",
+          "in": "query",
+          "required": false,
+          "nullable": true,
+          "type": "string",
+          "wireType": "string",
+          "declaredValue": null,
+          "style": "form",
+          "explode": true
+        },
+        {
+          "name": "group_by[]",
+          "in": "query",
+          "required": false,
+          "nullable": true,
+          "type": "array",
+          "wireType": "array",
+          "declaredValue": null,
+          "style": "form",
+          "explode": true
+        },
+        {
+          "name": "filter[]",
+          "in": "query",
+          "required": false,
+          "nullable": true,
+          "type": "array",
+          "wireType": "array",
+          "declaredValue": null,
+          "style": "form",
+          "explode": true
+        },
+        {
+          "name": "order_by",
+          "in": "query",
+          "required": false,
+          "nullable": true,
+          "type": "string",
+          "wireType": "string",
+          "declaredValue": null,
+          "style": "form",
+          "explode": true
+        },
+        {
+          "name": "order",
+          "in": "query",
+          "required": false,
+          "nullable": true,
+          "type": "anyOf",
+          "wireType": "string",
+          "declaredValue": "asc",
+          "style": "form",
+          "explode": true
+        }
+      ]
+    },
+    {
       "id": "listBetaOrganizationsAnalyticsAppsChatProjects",
       "wireOperationId": "listBetaOrganizationsAnalyticsAppsChatProjects",
       "method": "get",
@@ -48494,520 +49008,6 @@
             "type": "ref",
             "format": null,
             "ref": "BetaAnalyticsConnectorsResponse",
-            "nullable": false,
-            "items": null,
-            "mapValue": null,
-            "variants": null
-          },
-          "hasAuthoredExample": false,
-          "authoredExampleSource": "none"
-        }
-      ],
-      "errorResponseModes": [
-        {
-          "statusCode": "400",
-          "mediaType": "application/json",
-          "decoderKind": "json",
-          "schemaRef": "#/components/schemas/BetaErrorResponse",
-          "schemaType": {
-            "type": "ref",
-            "format": null,
-            "ref": "BetaErrorResponse",
-            "nullable": false,
-            "items": null,
-            "mapValue": null,
-            "variants": null
-          },
-          "hasAuthoredExample": false,
-          "authoredExampleSource": "none"
-        },
-        {
-          "statusCode": "401",
-          "mediaType": "application/json",
-          "decoderKind": "json",
-          "schemaRef": "#/components/schemas/BetaErrorResponse",
-          "schemaType": {
-            "type": "ref",
-            "format": null,
-            "ref": "BetaErrorResponse",
-            "nullable": false,
-            "items": null,
-            "mapValue": null,
-            "variants": null
-          },
-          "hasAuthoredExample": false,
-          "authoredExampleSource": "none"
-        },
-        {
-          "statusCode": "403",
-          "mediaType": "application/json",
-          "decoderKind": "json",
-          "schemaRef": "#/components/schemas/BetaErrorResponse",
-          "schemaType": {
-            "type": "ref",
-            "format": null,
-            "ref": "BetaErrorResponse",
-            "nullable": false,
-            "items": null,
-            "mapValue": null,
-            "variants": null
-          },
-          "hasAuthoredExample": false,
-          "authoredExampleSource": "none"
-        },
-        {
-          "statusCode": "404",
-          "mediaType": "application/json",
-          "decoderKind": "json",
-          "schemaRef": "#/components/schemas/BetaErrorResponse",
-          "schemaType": {
-            "type": "ref",
-            "format": null,
-            "ref": "BetaErrorResponse",
-            "nullable": false,
-            "items": null,
-            "mapValue": null,
-            "variants": null
-          },
-          "hasAuthoredExample": false,
-          "authoredExampleSource": "none"
-        },
-        {
-          "statusCode": "408",
-          "mediaType": "application/json",
-          "decoderKind": "json",
-          "schemaRef": "#/components/schemas/BetaErrorResponse",
-          "schemaType": {
-            "type": "ref",
-            "format": null,
-            "ref": "BetaErrorResponse",
-            "nullable": false,
-            "items": null,
-            "mapValue": null,
-            "variants": null
-          },
-          "hasAuthoredExample": false,
-          "authoredExampleSource": "none"
-        },
-        {
-          "statusCode": "409",
-          "mediaType": "application/json",
-          "decoderKind": "json",
-          "schemaRef": "#/components/schemas/BetaErrorResponse",
-          "schemaType": {
-            "type": "ref",
-            "format": null,
-            "ref": "BetaErrorResponse",
-            "nullable": false,
-            "items": null,
-            "mapValue": null,
-            "variants": null
-          },
-          "hasAuthoredExample": false,
-          "authoredExampleSource": "none"
-        },
-        {
-          "statusCode": "412",
-          "mediaType": "application/json",
-          "decoderKind": "json",
-          "schemaRef": "#/components/schemas/BetaErrorResponse",
-          "schemaType": {
-            "type": "ref",
-            "format": null,
-            "ref": "BetaErrorResponse",
-            "nullable": false,
-            "items": null,
-            "mapValue": null,
-            "variants": null
-          },
-          "hasAuthoredExample": false,
-          "authoredExampleSource": "none"
-        },
-        {
-          "statusCode": "413",
-          "mediaType": "application/json",
-          "decoderKind": "json",
-          "schemaRef": "#/components/schemas/BetaErrorResponse",
-          "schemaType": {
-            "type": "ref",
-            "format": null,
-            "ref": "BetaErrorResponse",
-            "nullable": false,
-            "items": null,
-            "mapValue": null,
-            "variants": null
-          },
-          "hasAuthoredExample": false,
-          "authoredExampleSource": "none"
-        },
-        {
-          "statusCode": "429",
-          "mediaType": "application/json",
-          "decoderKind": "json",
-          "schemaRef": "#/components/schemas/BetaErrorResponse",
-          "schemaType": {
-            "type": "ref",
-            "format": null,
-            "ref": "BetaErrorResponse",
-            "nullable": false,
-            "items": null,
-            "mapValue": null,
-            "variants": null
-          },
-          "hasAuthoredExample": false,
-          "authoredExampleSource": "none"
-        },
-        {
-          "statusCode": "431",
-          "mediaType": "application/json",
-          "decoderKind": "json",
-          "schemaRef": "#/components/schemas/BetaErrorResponse",
-          "schemaType": {
-            "type": "ref",
-            "format": null,
-            "ref": "BetaErrorResponse",
-            "nullable": false,
-            "items": null,
-            "mapValue": null,
-            "variants": null
-          },
-          "hasAuthoredExample": false,
-          "authoredExampleSource": "none"
-        },
-        {
-          "statusCode": "499",
-          "mediaType": "application/json",
-          "decoderKind": "json",
-          "schemaRef": "#/components/schemas/BetaErrorResponse",
-          "schemaType": {
-            "type": "ref",
-            "format": null,
-            "ref": "BetaErrorResponse",
-            "nullable": false,
-            "items": null,
-            "mapValue": null,
-            "variants": null
-          },
-          "hasAuthoredExample": false,
-          "authoredExampleSource": "none"
-        },
-        {
-          "statusCode": "500",
-          "mediaType": "application/json",
-          "decoderKind": "json",
-          "schemaRef": "#/components/schemas/BetaErrorResponse",
-          "schemaType": {
-            "type": "ref",
-            "format": null,
-            "ref": "BetaErrorResponse",
-            "nullable": false,
-            "items": null,
-            "mapValue": null,
-            "variants": null
-          },
-          "hasAuthoredExample": false,
-          "authoredExampleSource": "none"
-        },
-        {
-          "statusCode": "501",
-          "mediaType": "application/json",
-          "decoderKind": "json",
-          "schemaRef": "#/components/schemas/BetaErrorResponse",
-          "schemaType": {
-            "type": "ref",
-            "format": null,
-            "ref": "BetaErrorResponse",
-            "nullable": false,
-            "items": null,
-            "mapValue": null,
-            "variants": null
-          },
-          "hasAuthoredExample": false,
-          "authoredExampleSource": "none"
-        },
-        {
-          "statusCode": "503",
-          "mediaType": "application/json",
-          "decoderKind": "json",
-          "schemaRef": "#/components/schemas/BetaErrorResponse",
-          "schemaType": {
-            "type": "ref",
-            "format": null,
-            "ref": "BetaErrorResponse",
-            "nullable": false,
-            "items": null,
-            "mapValue": null,
-            "variants": null
-          },
-          "hasAuthoredExample": false,
-          "authoredExampleSource": "none"
-        },
-        {
-          "statusCode": "504",
-          "mediaType": "application/json",
-          "decoderKind": "json",
-          "schemaRef": "#/components/schemas/BetaErrorResponse",
-          "schemaType": {
-            "type": "ref",
-            "format": null,
-            "ref": "BetaErrorResponse",
-            "nullable": false,
-            "items": null,
-            "mapValue": null,
-            "variants": null
-          },
-          "hasAuthoredExample": false,
-          "authoredExampleSource": "none"
-        },
-        {
-          "statusCode": "529",
-          "mediaType": "application/json",
-          "decoderKind": "json",
-          "schemaRef": "#/components/schemas/BetaErrorResponse",
-          "schemaType": {
-            "type": "ref",
-            "format": null,
-            "ref": "BetaErrorResponse",
-            "nullable": false,
-            "items": null,
-            "mapValue": null,
-            "variants": null
-          },
-          "hasAuthoredExample": false,
-          "authoredExampleSource": "none"
-        }
-      ],
-      "params": [
-        {
-          "name": "date",
-          "in": "query",
-          "required": false,
-          "nullable": true,
-          "type": "anyOf",
-          "wireType": "string",
-          "declaredValue": null,
-          "style": "form",
-          "explode": true
-        },
-        {
-          "name": "ending_date",
-          "in": "query",
-          "required": false,
-          "nullable": true,
-          "type": "anyOf",
-          "wireType": "string",
-          "declaredValue": null,
-          "style": "form",
-          "explode": true
-        },
-        {
-          "name": "filter[]",
-          "in": "query",
-          "required": false,
-          "nullable": true,
-          "type": "array",
-          "wireType": "array",
-          "declaredValue": null,
-          "style": "form",
-          "explode": true
-        },
-        {
-          "name": "group_by[]",
-          "in": "query",
-          "required": false,
-          "nullable": true,
-          "type": "array",
-          "wireType": "array",
-          "declaredValue": null,
-          "style": "form",
-          "explode": true
-        },
-        {
-          "name": "limit",
-          "in": "query",
-          "required": false,
-          "nullable": true,
-          "type": "anyOf",
-          "wireType": "integer",
-          "declaredValue": null,
-          "style": "form",
-          "explode": true
-        },
-        {
-          "name": "order",
-          "in": "query",
-          "required": false,
-          "nullable": true,
-          "type": "anyOf",
-          "wireType": "string",
-          "declaredValue": "asc",
-          "style": "form",
-          "explode": true
-        },
-        {
-          "name": "order_by",
-          "in": "query",
-          "required": false,
-          "nullable": true,
-          "type": "string",
-          "wireType": "string",
-          "declaredValue": null,
-          "style": "form",
-          "explode": true
-        },
-        {
-          "name": "page",
-          "in": "query",
-          "required": false,
-          "nullable": true,
-          "type": "string",
-          "wireType": "string",
-          "declaredValue": null,
-          "style": "form",
-          "explode": true
-        },
-        {
-          "name": "starting_date",
-          "in": "query",
-          "required": false,
-          "nullable": true,
-          "type": "anyOf",
-          "wireType": "string",
-          "declaredValue": null,
-          "style": "form",
-          "explode": true
-        }
-      ],
-      "bindings": [
-        {
-          "name": "date",
-          "in": "query",
-          "required": false,
-          "nullable": true,
-          "type": "anyOf",
-          "wireType": "string",
-          "declaredValue": null,
-          "style": "form",
-          "explode": true
-        },
-        {
-          "name": "starting_date",
-          "in": "query",
-          "required": false,
-          "nullable": true,
-          "type": "anyOf",
-          "wireType": "string",
-          "declaredValue": null,
-          "style": "form",
-          "explode": true
-        },
-        {
-          "name": "ending_date",
-          "in": "query",
-          "required": false,
-          "nullable": true,
-          "type": "anyOf",
-          "wireType": "string",
-          "declaredValue": null,
-          "style": "form",
-          "explode": true
-        },
-        {
-          "name": "limit",
-          "in": "query",
-          "required": false,
-          "nullable": true,
-          "type": "anyOf",
-          "wireType": "integer",
-          "declaredValue": null,
-          "style": "form",
-          "explode": true
-        },
-        {
-          "name": "page",
-          "in": "query",
-          "required": false,
-          "nullable": true,
-          "type": "string",
-          "wireType": "string",
-          "declaredValue": null,
-          "style": "form",
-          "explode": true
-        },
-        {
-          "name": "group_by[]",
-          "in": "query",
-          "required": false,
-          "nullable": true,
-          "type": "array",
-          "wireType": "array",
-          "declaredValue": null,
-          "style": "form",
-          "explode": true
-        },
-        {
-          "name": "filter[]",
-          "in": "query",
-          "required": false,
-          "nullable": true,
-          "type": "array",
-          "wireType": "array",
-          "declaredValue": null,
-          "style": "form",
-          "explode": true
-        },
-        {
-          "name": "order_by",
-          "in": "query",
-          "required": false,
-          "nullable": true,
-          "type": "string",
-          "wireType": "string",
-          "declaredValue": null,
-          "style": "form",
-          "explode": true
-        },
-        {
-          "name": "order",
-          "in": "query",
-          "required": false,
-          "nullable": true,
-          "type": "anyOf",
-          "wireType": "string",
-          "declaredValue": "asc",
-          "style": "form",
-          "explode": true
-        }
-      ]
-    },
-    {
-      "id": "listBetaOrganizationsAnalyticsPlugins",
-      "wireOperationId": "listBetaOrganizationsAnalyticsPlugins",
-      "method": "get",
-      "path": "/v1/organizations/analytics/plugins?beta=true",
-      "namespace": ["beta", "organizations", "analytics", "plugins"],
-      "streams": false,
-      "mode": "normal",
-      "streamSelector": null,
-      "requestMediaType": null,
-      "contentTypes": null,
-      "publicMethods": [
-        {
-          "mode": "normal",
-          "name": "listBetaOrganizationsAnalyticsPlugins"
-        }
-      ],
-      "requestModes": [],
-      "responseModes": [
-        {
-          "statusCode": "200",
-          "mediaType": "application/json",
-          "decoderKind": "json",
-          "schemaRef": "#/components/schemas/BetaAnalyticsPluginsResponse",
-          "schemaType": {
-            "type": "ref",
-            "format": null,
-            "ref": "BetaAnalyticsPluginsResponse",
             "nullable": false,
             "items": null,
             "mapValue": null,
@@ -213416,6 +213416,71 @@
         ]
       },
       {
+        "id": "listBetaOrganizationAnalyticsPlugins",
+        "method": "get",
+        "path": "/v1/organizations/analytics/plugins?beta=true",
+        "summary": "Get per-plugin install + invocation usage for a given day, with pagination. Returns plugin usage metrics for the organization across Cowork and Claude Code, sorted by plugin name. The `plugin_name` value `third-party` is an aggregate bucket, not a plugin: it collects plugin activity, from either surface, for which the reporting client did not provide a plugin name — so an organization's own plugins can contribute both to their own named rows and to this bucket. Use `group_by[]` to break usage out per member, per RBAC group, or per product surface (Cowork / Claude Code), and `filter[]` to scope results; the parameter descriptions list the supported dimensions. Requires an API key with the `read:analytics` scope. `starting_date` / `ending_date` select range-rollup mode like `/skills`.",
+        "description": "Get per-plugin install + invocation usage for a given day, with pagination. Returns plugin usage metrics for the organization across Cowork and Claude Code, sorted by plugin name. The `plugin_name` value `third-party` is an aggregate bucket, not a plugin: it collects plugin activity, from either surface, for which the reporting client did not provide a plugin name — so an organization's own plugins can contribute both to their own named rows and to this bucket. Use `group_by[]` to break usage out per member, per RBAC group, or per product surface (Cowork / Claude Code), and `filter[]` to scope results; the parameter descriptions list the supported dimensions. Requires an API key with the `read:analytics` scope. `starting_date` / `ending_date` select range-rollup mode like `/skills`.",
+        "deprecated": false,
+        "deprecationMessage": null,
+        "parameters": [
+          {
+            "name": "date",
+            "in": "query",
+            "required": false,
+            "description": "UTC date in YYYY-MM-DD format. The day to get plugin usage for. Data is typically available with a 1-day lag (varies by query; the error for a too-recent date names the latest available day) and may be revised by a few percent over the following days. No earlier than 2026-01-01."
+          },
+          {
+            "name": "starting_date",
+            "in": "query",
+            "required": false,
+            "description": "UTC date in YYYY-MM-DD format. Start of a date range (inclusive). Enables rollup mode: one row per entity aggregated over the whole range — addable counters are summed across days, and a distinct count is never summed where summing could double-count (a field's range value is recomputed exactly over the window, approximate via HLL with typical error under 2%, null, or — for the creation-event counts, whose per-day values cannot overlap — a per-day sum that is itself exact; each field's own description says which). Use either `date` or `starting_date`, not both. Data is typically available with a 1-day lag (varies by query; the error for a too-recent date names the latest available day) and may be revised by a few percent over the following days. No earlier than 2026-01-01."
+          },
+          {
+            "name": "ending_date",
+            "in": "query",
+            "required": false,
+            "description": "UTC date in YYYY-MM-DD format. End of the date range (exclusive); only valid with `starting_date`. Data is typically available with a 1-day lag (varies by query; the error for a too-recent date names the latest available day), so this can be at most today — which is also the default when omitted, resolved once when the first page is served and reused for the rest of the pagination sequence. At most 366 days after `starting_date`."
+          },
+          {
+            "name": "limit",
+            "in": "query",
+            "required": false,
+            "description": "Number of results per page (1-1000, default 100)."
+          },
+          {
+            "name": "page",
+            "in": "query",
+            "required": false,
+            "description": "Opaque cursor from a previous response's `next_page` field."
+          },
+          {
+            "name": "group_by[]",
+            "in": "query",
+            "required": false,
+            "description": "Dimensions to break results out by (e.g. `group_by[]=user_id`). Supported on this endpoint: `product`, `rbac_group_id`, `user_id`. On this endpoint `product` takes the values `claude_code` or `cowork` only (the surfaces with plugin attribution). Grouped rows carry the requested dimension values as additional fields and paginate like ungrouped responses via `next_page`; an unsupported dimension returns 400. `rbac_group_id` attributes a user to every group they held at any point during each covered UTC day, so grouped rows are not an exclusive partition and can sum above org-level totals. At most 100 entries."
+          },
+          {
+            "name": "filter[]",
+            "in": "query",
+            "required": false,
+            "description": "Filters as `dimension:value`, e.g. `filter[]=rbac_group_id:{id}`. Repeat the param for OR within a dimension and across dimensions for AND. Supported dimensions on this endpoint: `plugin_name`, `product`, `rbac_group_id`, `user_id`. Value forms: `plugin_name` matches case-insensitively; `product` is `claude_code` or `cowork` (the only surfaces with plugin attribution); `rbac_group_id` takes the tagged id (`rbac_group_...`, as emitted in responses and by the spend-limits API) or a bare group UUID, and matches users who held the group at any point during each covered UTC day (time-of-usage attribution); `user_id` takes a tagged user id (`user_...`), as emitted in responses. An unsupported dimension returns 400. At most 100 entries."
+          },
+          {
+            "name": "order_by",
+            "in": "query",
+            "required": false,
+            "description": "Sort field. Restricted to the endpoint's sort column plus its rankable metrics (metrics default to descending; a few metrics rank in date-range mode only, per the endpoint's documented orderable set)."
+          },
+          {
+            "name": "order",
+            "in": "query",
+            "required": false,
+            "description": "Sort direction: `asc` or `desc`. Defaults to `asc` for the endpoint's sort column and to `desc` when `order_by` names a metric (a top-N ranking). Applies to `order_by`, or to the endpoint's default sort field when `order_by` is omitted."
+          }
+        ]
+      },
+      {
         "id": "listBetaOrganizationsAnalyticsAppsChatProjects",
         "method": "get",
         "path": "/v1/organizations/analytics/apps/chat/projects?beta=true",
@@ -213571,71 +213636,6 @@
             "in": "query",
             "required": false,
             "description": "Filters as `dimension:value`, e.g. `filter[]=rbac_group_id:{id}`. Repeat the param for OR within a dimension and across dimensions for AND. Supported dimensions on this endpoint: `connector_name`, `product`, `rbac_group_id`, `user_id`. Value forms: `connector_name` matches case-insensitively, a display name such as 'GitHub MCP' also matches its normalized stored form ('github'), and for rows whose `connector_name` is an opaque connector id the connector's display name (`connector_display_name`) also matches; `product` is one of `chat`, `claude_code`, `cowork`, or `office_agent`; `rbac_group_id` takes the tagged id (`rbac_group_...`, as emitted in responses and by the spend-limits API) or a bare group UUID, and matches users who held the group at any point during each covered UTC day (time-of-usage attribution); `user_id` takes a tagged user id (`user_...`), as emitted in responses. An unsupported dimension returns 400. At most 100 entries."
-          },
-          {
-            "name": "order_by",
-            "in": "query",
-            "required": false,
-            "description": "Sort field. Restricted to the endpoint's sort column plus its rankable metrics (metrics default to descending; a few metrics rank in date-range mode only, per the endpoint's documented orderable set)."
-          },
-          {
-            "name": "order",
-            "in": "query",
-            "required": false,
-            "description": "Sort direction: `asc` or `desc`. Defaults to `asc` for the endpoint's sort column and to `desc` when `order_by` names a metric (a top-N ranking). Applies to `order_by`, or to the endpoint's default sort field when `order_by` is omitted."
-          }
-        ]
-      },
-      {
-        "id": "listBetaOrganizationsAnalyticsPlugins",
-        "method": "get",
-        "path": "/v1/organizations/analytics/plugins?beta=true",
-        "summary": "Get per-plugin install + invocation usage for a given day, with pagination. Returns plugin usage metrics for the organization across Cowork and Claude Code, sorted by plugin name. The `plugin_name` value `third-party` is an aggregate bucket, not a plugin: it collects plugin activity, from either surface, for which the reporting client did not provide a plugin name — so an organization's own plugins can contribute both to their own named rows and to this bucket. Use `group_by[]` to break usage out per member, per RBAC group, or per product surface (Cowork / Claude Code), and `filter[]` to scope results; the parameter descriptions list the supported dimensions. Requires an API key with the `read:analytics` scope. `starting_date` / `ending_date` select range-rollup mode like `/skills`.",
-        "description": "Get per-plugin install + invocation usage for a given day, with pagination. Returns plugin usage metrics for the organization across Cowork and Claude Code, sorted by plugin name. The `plugin_name` value `third-party` is an aggregate bucket, not a plugin: it collects plugin activity, from either surface, for which the reporting client did not provide a plugin name — so an organization's own plugins can contribute both to their own named rows and to this bucket. Use `group_by[]` to break usage out per member, per RBAC group, or per product surface (Cowork / Claude Code), and `filter[]` to scope results; the parameter descriptions list the supported dimensions. Requires an API key with the `read:analytics` scope. `starting_date` / `ending_date` select range-rollup mode like `/skills`.",
-        "deprecated": false,
-        "deprecationMessage": null,
-        "parameters": [
-          {
-            "name": "date",
-            "in": "query",
-            "required": false,
-            "description": "UTC date in YYYY-MM-DD format. The day to get plugin usage for. Data is typically available with a 1-day lag (varies by query; the error for a too-recent date names the latest available day) and may be revised by a few percent over the following days. No earlier than 2026-01-01."
-          },
-          {
-            "name": "starting_date",
-            "in": "query",
-            "required": false,
-            "description": "UTC date in YYYY-MM-DD format. Start of a date range (inclusive). Enables rollup mode: one row per entity aggregated over the whole range — addable counters are summed across days, and a distinct count is never summed where summing could double-count (a field's range value is recomputed exactly over the window, approximate via HLL with typical error under 2%, null, or — for the creation-event counts, whose per-day values cannot overlap — a per-day sum that is itself exact; each field's own description says which). Use either `date` or `starting_date`, not both. Data is typically available with a 1-day lag (varies by query; the error for a too-recent date names the latest available day) and may be revised by a few percent over the following days. No earlier than 2026-01-01."
-          },
-          {
-            "name": "ending_date",
-            "in": "query",
-            "required": false,
-            "description": "UTC date in YYYY-MM-DD format. End of the date range (exclusive); only valid with `starting_date`. Data is typically available with a 1-day lag (varies by query; the error for a too-recent date names the latest available day), so this can be at most today — which is also the default when omitted, resolved once when the first page is served and reused for the rest of the pagination sequence. At most 366 days after `starting_date`."
-          },
-          {
-            "name": "limit",
-            "in": "query",
-            "required": false,
-            "description": "Number of results per page (1-1000, default 100)."
-          },
-          {
-            "name": "page",
-            "in": "query",
-            "required": false,
-            "description": "Opaque cursor from a previous response's `next_page` field."
-          },
-          {
-            "name": "group_by[]",
-            "in": "query",
-            "required": false,
-            "description": "Dimensions to break results out by (e.g. `group_by[]=user_id`). Supported on this endpoint: `product`, `rbac_group_id`, `user_id`. On this endpoint `product` takes the values `claude_code` or `cowork` only (the surfaces with plugin attribution). Grouped rows carry the requested dimension values as additional fields and paginate like ungrouped responses via `next_page`; an unsupported dimension returns 400. `rbac_group_id` attributes a user to every group they held at any point during each covered UTC day, so grouped rows are not an exclusive partition and can sum above org-level totals. At most 100 entries."
-          },
-          {
-            "name": "filter[]",
-            "in": "query",
-            "required": false,
-            "description": "Filters as `dimension:value`, e.g. `filter[]=rbac_group_id:{id}`. Repeat the param for OR within a dimension and across dimensions for AND. Supported dimensions on this endpoint: `plugin_name`, `product`, `rbac_group_id`, `user_id`. Value forms: `plugin_name` matches case-insensitively; `product` is `claude_code` or `cowork` (the only surfaces with plugin attribution); `rbac_group_id` takes the tagged id (`rbac_group_...`, as emitted in responses and by the spend-limits API) or a bare group UUID, and matches users who held the group at any point during each covered UTC day (time-of-usage attribution); `user_id` takes a tagged user id (`user_...`), as emitted in responses. An unsupported dimension returns 400. At most 100 entries."
           },
           {
             "name": "order_by",

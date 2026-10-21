@@ -5,7 +5,7 @@ import type { BetaBase64PDFSource } from "./shared-beta-base64";
 
 import type { BetaResponseCitationsConfig } from "./shared-beta-response";
 
-import type { BetaPlainTextSource } from "./shared-beta.part001";
+import type { BetaPlainTextSource } from "./shared-beta-shared";
 
 /**
  * Typed representation of the `BetaResponseDocumentBlock` API schema.

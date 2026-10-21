@@ -3,11 +3,11 @@
 
 import type { BetaInputTokensClearAtLeast, BetaInputTokensTrigger } from "./shared-beta-input";
 
+import type { BetaAllThinkingTurns } from "./shared-beta-shared";
+
 import type { BetaThinkingTurns } from "./shared-beta-thinking";
 
 import type { BetaToolUsesKeep, BetaToolUsesTrigger } from "./shared-beta-tool";
-
-import type { BetaAllThinkingTurns } from "./shared-beta.part001";
 
 /**
  * Typed representation of the `BetaClearThinking20251015` API schema.

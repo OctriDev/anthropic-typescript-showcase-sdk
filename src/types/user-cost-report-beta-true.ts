@@ -8,7 +8,7 @@ import type { BetaInferenceGeo } from "./shared-beta-inference";
 import type {
   BetaCostReportTokenType,
   BetaMessagesUsageReportContextWindow,
-} from "./shared-beta.part001";
+} from "./shared-beta-shared";
 
 /**
  * Typed representation of the `BetaAnalyticsCostUsersItem` API schema.

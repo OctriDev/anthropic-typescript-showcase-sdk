@@ -20,7 +20,7 @@ import type {
   BetaCompactionIterationUsage,
   BetaIterationsUsage,
   BetaSpeed,
-} from "./shared-beta.part001";
+} from "./shared-beta-shared";
 
 /**
  * Typed representation of the `BetaUsage` API schema.

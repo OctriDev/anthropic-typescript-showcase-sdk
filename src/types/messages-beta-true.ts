@@ -7,7 +7,7 @@ import type { BetaInferenceGeoFilter } from "./shared-beta-inference";
 
 import type { BetaServerToolUse } from "./shared-beta-server";
 
-import type { BetaMessagesUsageReportContextWindow } from "./shared-beta.part001";
+import type { BetaMessagesUsageReportContextWindow } from "./shared-beta-shared";
 
 /**
  * Typed representation of the `BetaGetMessagesUsageReportResponse` API schema.

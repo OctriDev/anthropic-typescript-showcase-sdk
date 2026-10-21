@@ -2,22 +2,9 @@
 // This file is machine-generated from your OpenAPI spec.
 
 import type {
-  BetaManagedAgentsAgentCustomToolUseEvent,
-  BetaManagedAgentsAgentMcpToolResultEvent,
-  BetaManagedAgentsAgentMcpToolUseEvent,
-  BetaManagedAgentsAgentMessageEvent,
-  BetaManagedAgentsAgentThinkingEvent,
-  BetaManagedAgentsAgentThreadContextCompactedEvent,
-  BetaManagedAgentsAgentThreadMessageReceivedEvent,
-  BetaManagedAgentsAgentThreadMessageSentEvent,
-  BetaManagedAgentsAgentToolResultEvent,
-  BetaManagedAgentsAgentToolUseEvent,
-} from "./shared-beta-managed-agents.part001";
-
-import type {
   BetaManagedAgentsSessionDeletedEvent,
   BetaManagedAgentsSessionErrorEvent,
-} from "./shared-beta-managed-agents.part006";
+} from "./shared-beta-managed-agents-plain-text-document-source";
 
 import type {
   BetaManagedAgentsSessionStatusIdleEvent,
@@ -30,7 +17,7 @@ import type {
   BetaManagedAgentsSessionThreadStatusRunningEvent,
   BetaManagedAgentsSessionThreadStatusTerminatedEvent,
   BetaManagedAgentsSessionUpdatedEvent,
-} from "./shared-beta-managed-agents.part007";
+} from "./shared-beta-managed-agents-session-requires-action";
 
 import type {
   BetaManagedAgentsSessionUsageEvent,
@@ -42,7 +29,20 @@ import type {
   BetaManagedAgentsSystemMessageEvent,
   BetaManagedAgentsSystemMessageEventParams,
   BetaManagedAgentsToolResultContentBlock,
-} from "./shared-beta-managed-agents.part008";
+} from "./shared-beta-managed-agents-session-usage-event";
+
+import type {
+  BetaManagedAgentsAgentCustomToolUseEvent,
+  BetaManagedAgentsAgentMcpToolResultEvent,
+  BetaManagedAgentsAgentMcpToolUseEvent,
+  BetaManagedAgentsAgentMessageEvent,
+  BetaManagedAgentsAgentThinkingEvent,
+  BetaManagedAgentsAgentThreadContextCompactedEvent,
+  BetaManagedAgentsAgentThreadMessageReceivedEvent,
+  BetaManagedAgentsAgentThreadMessageSentEvent,
+  BetaManagedAgentsAgentToolResultEvent,
+  BetaManagedAgentsAgentToolUseEvent,
+} from "./shared-beta-managed-agents-shared";
 
 import type {
   BetaManagedAgentsUserCustomToolResultEvent,
@@ -54,7 +54,7 @@ import type {
   BetaManagedAgentsUserToolConfirmationEvent,
   BetaManagedAgentsUserToolConfirmationResult,
   BetaManagedAgentsUserToolResultEvent,
-} from "./shared-beta-managed-agents.part009";
+} from "./shared-beta-managed-agents-user-actor";
 
 /**
  * A `BetaManagedAgentsEventParams` whose `type` names no branch this SDK knows, kept as received.

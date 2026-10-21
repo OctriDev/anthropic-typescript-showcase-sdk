@@ -11,9 +11,9 @@ import type { BetaFileDocumentSource } from "./shared-beta-file";
 
 import type { BetaRequestCitationsConfig } from "./shared-beta-request";
 
-import type { BetaPlainTextSource } from "./shared-beta.part001";
+import type { BetaPlainTextSource } from "./shared-beta-shared";
 
-import type { BetaURLPDFSource } from "./shared-beta.part002";
+import type { BetaURLPDFSource } from "./shared-beta-token-task-budget";
 
 /**
  * Typed representation of the `BetaRequestDocumentBlock` API schema.

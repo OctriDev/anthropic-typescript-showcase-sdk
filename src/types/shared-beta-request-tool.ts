@@ -15,14 +15,14 @@ import type { BetaRequestTextBlock } from "./shared-beta-request-text";
 
 import type { BetaServerToolCaller, BetaServerToolCaller_20260120 } from "./shared-beta-server";
 
+import type { BetaDirectCaller } from "./shared-beta-shared";
+
 import type {
   BetaToolChangeMCPToolReference,
   BetaToolChangeMCPToolsetReference,
   BetaToolChangeToolReference,
   BetaToolSearchToolResultErrorCode,
 } from "./shared-beta-tool";
-
-import type { BetaDirectCaller } from "./shared-beta.part001";
 
 /**
  * Mid-conversation directive to surface a declared tool.

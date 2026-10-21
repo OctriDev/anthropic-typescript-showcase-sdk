@@ -3,9 +3,9 @@
 
 import type { BetaServerToolCaller, BetaServerToolCaller_20260120 } from "./shared-beta-server";
 
-import type { BetaToolSearchToolResultErrorCode } from "./shared-beta-tool";
+import type { BetaDirectCaller } from "./shared-beta-shared";
 
-import type { BetaDirectCaller } from "./shared-beta.part001";
+import type { BetaToolSearchToolResultErrorCode } from "./shared-beta-tool";
 
 /**
  * Typed representation of the `BetaResponseToolReferenceBlock` API schema.

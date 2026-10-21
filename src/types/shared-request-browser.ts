@@ -7,7 +7,7 @@ import type {
   BrowserStateChangeDownloadStarted,
   BrowserStateChangeTabOpened,
   BrowserStateTabEntry,
-} from "./shared-browser.part001";
+} from "./shared-browser-shared";
 
 import type { CacheControlEphemeral } from "./shared-cache";
 
